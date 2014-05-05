@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript" src="../JS/clotho3API.js"></script>
 <script >
 function onSubmitBtnClick()
 {
