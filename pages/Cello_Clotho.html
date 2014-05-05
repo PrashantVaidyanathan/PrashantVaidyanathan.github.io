@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>
+<script >
 function onSubmitBtnClick()
 {
 	var text = document.getElementById("gateupload").value;
 	window.alert(text);
 }
+function onUploadFileClick()
+{
+	if(!(window.File && window.FileReader && window.FileList && window.Blob))
+	{
+		alert('File APIs are not fully supported in this browser. This may cause issues.');
+	}
+}
+window.onload = function()
+{
+	var fileinput = document.getElementById('gateuploadbtn');
+	var gatetextarea = document.getElementById('gateupload');
+	fileinput.addEventListener('change',
+	function(e) 
+	{
+		var file = fileinput.files[0];
+		var textType = /text.*/;
+		if(file.type.match(textType))
+		{
+			var fileReader = new FileReader();
+			fileReader.onload = function(e) 
+			{
+				gatetextarea.innerText = fileReader.result;
+			}
+			fileReader.readAsText(file);
+		}
+		else
+		{
+			alert("Please Upload a Valid Text file");
+		}
+	});
+}
+
 </script>
 
 </head>
@@ -21,8 +53,9 @@ function onSubmitBtnClick()
 <textarea id="gateupload" rows="30" cols="60"> </textarea>
 </div>
 <div align="center">
+<input type="file"  id="gateuploadbtn">
 <input type="Button" value="Upload Sample File">
-<input type="Submit" onclick="onSubmitBtnClick()" />
+<input type="Submit" id="submitbtn" onclick="onSubmitBtnClick()" />
 </div>
 
 
