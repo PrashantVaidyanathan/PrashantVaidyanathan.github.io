@@ -41,6 +41,7 @@ window.onload = function()
 
 function readSampleGatesFile()
 {
+	var gatetextarea = document.getElementById('gateupload');
 	var txtFile = new XMLHttpRequest();
 	txtFile.open("GET", "http://prashantvaidyanathan.github.io/resources/SampleGates.txt", true);
 	txtFile.onreadystatechange = function() 
@@ -50,16 +51,12 @@ function readSampleGatesFile()
 			if (txtFile.status === 200) 
 			{ 
 				allText = txtFile.responseText; 
-				alert(allText);
+				gatetextarea.innerText = allText;
 			}
 		}
 	}
 	txtFile.send(null);
 }
-
-
-
-
 
 </script>
 
