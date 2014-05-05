@@ -41,10 +41,13 @@ window.onload = function()
 
 function readSampleGatesFile()
 {
+	var filelink = "http://" + document.domain + "/SampleText.txt";
+	//var filelink = "file:///D:/Studies/GitFolder/Git%20Home%20Page/PrashantVaidyanathan.github.io/resources/SampleGates.txt";
 	var xmlhttp;
 	if (window.XMLHttpRequest)
 	{// code for IE7+, Firefox, Chrome, Opera, Safari
 		xmlhttp=new XMLHttpRequest();
+		
 	}
 	else
 	{// code for IE6, IE5
@@ -52,12 +55,14 @@ function readSampleGatesFile()
 	}
 	xmlhttp.onreadystatechange=function()
 	{
-	if (xmlhttp.readyState==4 && xmlhttp.status==200)
+	
+	if (xmlhttp.readyState==4 && (xmlhttp.status==200 || xmlhttp.status==0 ))
     {
+		alert(filelink);
 		document.getElementById("gateupload").innerHTML=xmlhttp.responseText;
     }
   }
-	xmlhttp.open("GET","..\SampleGates.txt",true);
+	xmlhttp.open("GET",filelink,true);
 	xmlhttp.send();
 }
 
