@@ -39,6 +39,28 @@ window.onload = function()
 	});
 }
 
+function readSampleGatesFile()
+{
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+	{// code for IE7+, Firefox, Chrome, Opera, Safari
+		xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{// code for IE6, IE5
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function()
+	{
+	if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+		document.getElementById("gateupload").innerHTML=xmlhttp.responseText;
+    }
+  }
+	xmlhttp.open("GET","..\SampleGates.txt",true);
+	xmlhttp.send();
+}
+
 </script>
 
 </head>
@@ -47,6 +69,12 @@ window.onload = function()
 </title>
 
 <body>
+
+
+
+
+
+
 <div align="center">
 <h1 style="font-family:Arial, Helvetica, sans-serif;">Upload Cello Gates</h1> 
 
@@ -54,8 +82,8 @@ window.onload = function()
 </div>
 <div align="center">
 <input type="file"  id="gateuploadbtn">
-<input type="Button" value="Upload Sample File">
-<input type="Submit" id="submitbtn" onclick="onSubmitBtnClick()" />
+<input type="button" value="Upload Sample File" onclick="readSampleGatesFile()">
+<input type="submit" id="submitbtn" onclick="onSubmitBtnClick()" />
 </div>
 
 
