@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html>
+
+<head>
 <title>
-
+Prashant Vaidyanathan
 </title>
+<script>
 
-<body>
+var timerval = setInterval(function() {changepic()},15000)
+function changepic()
+{
+var profile_pic = document.getElementById('profilepic');
+	if(profile_pic.src.match("profilepic1"))
+	{
+		profile_pic.src = "resources/pics/profilepic2.jpg"
+	}
+	else
+	{
+		profile_pic.src = "resources/pics/profilepic1.jpg"
+	}
+	
+}
+</script>
+</head>
+
+<body onload="changepic()">
 
 
 <div>
 
 <div id="header" style="float:left;margin-left:40px">
-<img src="resources/pics/profilepic.jpg" alt="Profile Pic" style="border:4px solid #000000" width="150" height="150">
+<img src="resources/pics/profilepic1.jpg" id="profilepic" alt="Profile Pic" style="border:4px solid #000000" width="134" height="180">
 </div>
-<div style="height:150px;white-space: nowrap;" align="center" >
+<div style="height:180px;white-space: nowrap;" align="center" >
 <h1 style="font-family:Arial, Helvetica, sans-serif;">Prashant Vaidyanathan</h1> 
 <a href="pages/about.html">About Me</a>
 <a href="pages/projects.html">Projects</a>
@@ -29,13 +49,6 @@
 
 
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-Nam arcu mi, mollis sit amet nisl eu, consectetur consectetur risus. 
-Ut semper odio sed blandit pharetra. Maecenas congue vestibulum tellus, non bibendum erat luctus ut. 
-Duis eu libero at risus facilisis volutpat vel eu augue. Pellentesque gravida, sapien vel fringilla tristique, ipsum augue mattis massa, id malesuada ligula felis id massa. 
-Nulla sem libero, lobortis quis porta dapibus, gravida sed nisl. 
-In consequat enim vel iaculis iaculis. Duis sit amet lacus id metus aliquet luctus. 
-Morbi mi ipsum, accumsan vitae quam eget, semper euismod turpis. Mauris auctor libero sapien, vitae lobortis sapien rhoncus ut. 
-Aenean vitae urna lacus.</p>
+<p>Hey. My name is Prashant and I am a graduate student studying in Boston University.</p>
 </body>
 </html>
