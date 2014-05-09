@@ -77,25 +77,51 @@ function readSampleGatesFile()
 
 <textarea id="gateupload" rows="30" cols="60"> </textarea>
 </div>
-
 <div align="center">
-<button id="connect" type="button" class="btn btn-primary btn-lg">Connect</button>
-<button id="get" type="button" class="btn btn-success btn-lg">Get</button>
+<input type="file"  id="gateuploadbtn">
+<input type="button" value="Upload Sample File" onclick="readSampleGatesFile()">
+<input type="submit" id="submitbtn" onclick="onSubmitBtnClick()" />
+</div>
+	
+<div align="center">
+
+<!--
 <button id="query" type="button" class="btn btn-success btn-lg">Query</button>
-<button id="create" type="button" class="btn btn-success btn-lg">Create</button>
 <button id="destroy" type="button" class="btn btn-success btn-lg">Destroy</button>
 <button id="set" type="button" class="btn btn-success btn-lg">Set</button>
 <button id="createAll" type="button" class="btn btn-success btn-lg">Create All</button>
 <button id="queryOne" type="button" class="btn btn-success btn-lg">Query One</button>
+-->
+<button id="connect" type="button" class="btn btn-primary btn-lg">Connect</button>
+<button id="create" type="button" class="btn btn-success btn-lg">Create</button><br>
+
+<input id="bgname" type = "text"> Gate Name </input>
+<button id="get" type="button" class="btn btn-success btn-lg">Get</button><br>
+<input id="pmax" type = "text"> pMin </input>
+<input id="pmin" type = "text"> pMax </input><br>
+<input id="kd" type = "text"> kd </input>
+<input id="gaten" type = "text"> n </input>
+
+
+
 <script>
             $(document).ready(function() {
-			alert("Clicked on The connect button"); 
+			//alert("Clicked on The connect button"); 
                 $("#connect").click(function() {
                     alert("Connecting");
                 });
                 $("#get").click(function() {
-                    Clotho.get("NOT_rbs1-PhlF").then(function(data) {
-                        alert(data.pMax);
+		    var querydata = document.getElementById('bgname').value;
+			alert(querydata);
+                    Clotho.get(querydata).then(function(data) {
+			alert(data.pMax);
+			alert(data.pMin);
+			alert(data.kd);
+			alert(data.n);
+		    document.getElementById('pmax').value = data.pMax; 
+                    document.getElementById('pmin').value = data.pMin; 
+                    document.getElementById('kd').value = data.kd; 
+                    document.getElementById('gaten').value = data.n; 
                     }).done();
                 });
                 $("#query").click(function() {
@@ -109,11 +135,23 @@ function readSampleGatesFile()
                     }).done();
                 });
                 $("#create").click(function() {
-                    obj = {"name":"NOT_rbs1-PhlF", "pMax":"17.22043" , "pMin":"0.073805" , "kd":"0.560868" , "n":"3.876935" };
-                    Clotho.create(obj);
-                    Clotho.get("NOT_rbs1-PhlF").then(function(data) {
-                        alert(data.n);
-                    }).done();
+
+		    var gatelines = document.getElementById('gateupload').value;
+		    var gatearray = gatelines.split("\n");
+		    for(var i=0;i< gatearray.length;i++)
+	            {
+			var gateparts = gatearray[i].split(" ");
+			obj = {"name":gateparts[0], "pMax":gateparts[1], "pMin":gateparts[2], "kd":gateparts[3], "n":gateparts[4] };
+			Clotho.create(obj);
+			
+	            }
+	            var textmessage = gatearray.length + " Gates added.";
+	            alert(textmessage);
+                    //obj = {"name":"NOT_rbs1-PhlF", "pMax":"17.22043" , "pMin":"0.073805" , "kd":"0.560868" , "n":"3.876935" };
+                    //Clotho.create(obj);
+                    //Clotho.get("NOT_rbs1-PhlF").then(function(data) {
+                    //    alert(data.n);
+                    //}).done();
                     // Clotho.create(obj).then(function(id) {
                     //     Clotho.get(id).then(function(data) {
                     //         alert(data.sequence);
@@ -149,12 +187,7 @@ function readSampleGatesFile()
 </div>
 
 
-<div align="center">
-<input type="file"  id="gateuploadbtn">
-<input type="button" value="Upload Sample File" onclick="readSampleGatesFile()">
-<input type="submit" id="submitbtn" onclick="onSubmitBtnClick()" />
-</div>
-	
+
 
 </body>
 </html>
