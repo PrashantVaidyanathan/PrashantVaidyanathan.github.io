@@ -114,10 +114,10 @@ function readSampleGatesFile()
 		    var querydata = document.getElementById('bgname').value;
 			//alert(querydata);
                     Clotho.get(querydata).then(function(data) {
-			//alert(data.pMax);
-			//alert(data.pMin);
-			//alert(data.kd);
-			//alert(data.n);
+			alert(data.pMax);
+			alert(data.pMin);
+			alert(data.kd);
+			alert(data.n);
 		    document.getElementById('pmax').value = data.pMax; 
                     document.getElementById('pmin').value = data.pMin; 
                     document.getElementById('kd').value = data.kd; 
