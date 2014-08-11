@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Clotho-Cello Interface</title>
+<title>MIT - Broad Foundry</title>
 <script type="text/javascript" src="../JS/clotho3API.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/q.js/1.0.0/q.js"></script>
@@ -49,7 +49,7 @@ function readSampleGatesFile()
 {
 	var gatetextarea = document.getElementById('gateupload');
 	var txtFile = new XMLHttpRequest();
-	txtFile.open("GET", "http://prashantvaidyanathan.github.io/resources/SampleGates.txt", true);
+	txtFile.open("GET", "http://prashantvaidyanathan.github.io/resources/SampleBroad.txt", true);
 	txtFile.onreadystatechange = function() 
 	{
 		if (txtFile.readyState === 4) 
@@ -92,15 +92,20 @@ function readSampleGatesFile()
 <button id="createAll" type="button" class="btn btn-success btn-lg">Create All</button>
 <button id="queryOne" type="button" class="btn btn-success btn-lg">Query One</button>
 -->
-<button id="connect" type="button" class="btn btn-primary btn-lg">Connect</button>
-<button id="create" type="button" class="btn btn-success btn-lg">Create</button><br>
+<!-- <button id="connect" type="button" class="btn btn-primary btn-lg">Connect</button> -->
+<form>
+<input type="radio" value="AsJSON" name="inputType" id="asJson" checked>As Jason
+<input type="radio" value="Parse" name="inputType" id="parse" >Parse<br>
+</form>
+<button id="create" type="button" class="btn btn-success btn-lg">Save</button><br>
 
-<input id="bgname" type = "text"> Gate Name </input>
+
+<!-- <input id="bgname" type = "text"> Gate Name </input>
 <button id="get" type="button" class="btn btn-success btn-lg">Get</button><br>
 <input id="pmax" type = "text"> pMin </input>
 <input id="pmin" type = "text"> pMax </input><br>
 <input id="kd" type = "text"> kd </input>
-<input id="gaten" type = "text"> n </input>
+<input id="gaten" type = "text"> n </input> --> 
 
 
 
@@ -111,9 +116,11 @@ function readSampleGatesFile()
                     alert("Connecting");
                 });
                 $("#get").click(function() {
+		    alert("Button clicked!");
 		    var querydata = document.getElementById('bgname').value;
-			//alert(querydata);
+			alert(querydata);
                     Clotho.get(querydata).then(function(data) {
+			alert(data);			
 			alert(data.pMax);
 			alert(data.pMin);
 			alert(data.kd);
@@ -138,13 +145,41 @@ function readSampleGatesFile()
 
 		    var gatelines = document.getElementById('gateupload').value;
 		    var gatearray = gatelines.split("\n");
-		    for(var i=0;i< gatearray.length;i++)
-	            {
-			var gateparts = gatearray[i].split(" ");
-			obj = {"name":gateparts[0], "pMax":gateparts[1], "pMin":gateparts[2], "kd":gateparts[3], "n":gateparts[4] };
-			Clotho.create(obj);
-			
-	            }
+
+		if(document.getElementById('asJson').checked)
+		{
+			for(var i=0;i< gatearray.length;i++)
+	            	{
+				gateparts = gatearray[i];
+				obj = JSON.parse(gateparts);
+				Clotho.create(obj);	
+	            	}
+		}		
+		else if(document.getElementById('parse').checked)
+		{
+			for(var i=0;i< gatearray.length;i++)
+	            	{
+				var gateparts = gatearray[i].split(" ");
+				var gtstring = "";				
+				gtstring += "{"				
+				for(var j=0; j<gateparts.length-1;j++)
+				{
+					var gatecomp = gateparts[j].split(":");
+					gtstring += ("\""+gatecomp[0]+"\":\""+gatecomp[1]+"\",");
+				}
+				var gatecomp = gateparts[gateparts.length-1].split(":");
+				gtstring += ("\""+gatecomp[0]+"\":\""+gatecomp[1]+"\"");
+				gtstring += "}"				
+				obj = JSON.parse(gtstring);
+				Clotho.create(obj);
+			}
+		}
+		    /*stringobj = "{\"name\":\"stringate\",\"randomprop\":\"3.142567\"}";
+		    obj = JSON.parse(stringobj);
+		    Clotho.create(obj);
+		    obj = [{"name":"trygate2", "prop1":"3.456", "subprop": {"attr1":"42", "reason":"Answer to life"}, "prop2":"Success"}];
+		    Clotho.create(obj);*/
+		    
 	            var textmessage = gatearray.length + " Gates added.";
 	            alert(textmessage);
                     //obj = {"name":"NOT_rbs1-PhlF", "pMax":"17.22043" , "pMin":"0.073805" , "kd":"0.560868" , "n":"3.876935" };

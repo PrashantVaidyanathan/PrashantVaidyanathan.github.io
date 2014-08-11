@@ -111,9 +111,11 @@ function readSampleGatesFile()
                     alert("Connecting");
                 });
                 $("#get").click(function() {
+		    alert("Button clicked!");
 		    var querydata = document.getElementById('bgname').value;
-			//alert(querydata);
+			alert(querydata);
                     Clotho.get(querydata).then(function(data) {
+			alert(data);			
 			alert(data.pMax);
 			alert(data.pMin);
 			alert(data.kd);
