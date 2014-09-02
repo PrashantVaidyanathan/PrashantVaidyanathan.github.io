@@ -17,15 +17,16 @@ body
 .menuDiv
 {
 	background-color: #006887;	
-	height: auto !important;
-	min-height: 120px;
+	
 	width: 100%;
 }
 .mainBodyDiv
 {
 	min-height: 100%;
 	height: auto !important;
-	height: 100%;
+	height: 100%;  
+
+	
 }
 .footer
 {
@@ -37,30 +38,14 @@ body
 	font-size: 48px;
 	font-family: 'Allerta Stencil', sans-serif;
 	margin-bottom: 20px;
+	
 	/*font-family: Impact, Charcoal, sans-serif;*/	 
 }
 
-.mainConsole
-{
 
-}
 .debugConsole
 {
-	background-color: white;
-	margin-bottom: 0;
-	background-color: #9CFFA4;
-	align-content: center;
-}
-
-
-.wrapper {
-min-height: 100%;
-height: auto !important;
-height: 100%;
-margin: 0 auto -155px;
-}
-.footerPortion, .push {
-height: 155px;
+	background-color: #f0f1ff;
 }
 
 .headerlink{text-decoration:none; text-align:center; 
@@ -157,7 +142,7 @@ height: 155px;
  
     /*----- Content of Tabs -----*/
     .tab-content {
-    	min-height: 500px;
+    	  min-height: 300px; 
         padding:15px;
         border-radius:3px;
         box-shadow:-1px 1px 1px rgba(0,0,0,0.15);

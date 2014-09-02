@@ -223,7 +223,7 @@
     <div class="tab-content">
         <div id="tab1" class="tab active">
            	<div align="center">
-  	 	 		<textarea id="gateupload" rows="30" cols="60"> </textarea>
+  	 	 		<textarea id="gateupload" rows="15" cols="60"> </textarea>
   	 	 		<br>
 				<input type="file"  id="gateuploadbtn">
 				<input type="button" value="Upload Sample File" onclick="readSampleGatesFile()">
@@ -253,12 +253,13 @@
   	 
   	 	<div class="debugConsole" >
   	 	<div align="center">
-  	 	 	<p> Debug Console</p> 
- 			<textarea id="debgWindow" style="width:100%; min-height:200px; background-color:#9CFFA4;" ></textarea> 	 	
-
+  	 	 	<p style="font-size:20px;"> <b>Debug Console</b></p> 
+ 			<textarea id="debugWindow" style="width:50%; min-height:200px; height:100%; background-color:#9CFFA4;float:left" ></textarea> 	 	
+			<textarea id="outputWindow" style="width:49%; min-height:200px; height:100%; background-color:#E31010;float:right" ></textarea> 	 	
+			
   	 	</div>
   	   </div>
-	</div>
+  	</div>
 	
 	
  	</body>
