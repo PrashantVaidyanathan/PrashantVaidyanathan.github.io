@@ -94,7 +94,17 @@ body
   
  }
  
- 
+.queryBar
+{
+	
+}
+.queryText
+{
+	border-radius: 4px;
+	font-size: 20px;
+	margin-bottom: 5px;	
+	
+}
  
  
  /*----- Tabs -----*/

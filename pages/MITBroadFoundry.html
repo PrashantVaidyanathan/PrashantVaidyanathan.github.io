@@ -86,6 +86,102 @@
 
         </script>
 		  <script>
+    		function runScript(e) 
+    		{
+    			if (e.keyCode == 13) 
+    			{
+    				var text;
+    				var queryVal = document.getElementById('clothoQuery').value;
+    				Clotho.get(queryVal).then(function(data) {
+                           text = data.name;
+                           if(data!=null)
+                           {
+                           	document.getElementById('debugWindow').value += ("Object found. Name: "+text+"\n");
+                           }
+        							else 
+        							{
+										document.getElementById('debugWindow').value += ("No results obtained\n");        								
+        							}
+                        }).done();
+    				
+					return false;
+    			}
+			}
+			</script>
+    </head>
+
+
+    <body>
+    
+   
+    
+	<div class="menuDiv" >
+		<div style="white-space: nowrap;" align="center" >
+			<h1 class="nameHeader">Clotho - MIT-BroadFoundry Demo</h1> 
+			
+			
+			<form action="#" align="center">
+				<div align="center">
+					<input type="text" class="queryText" name="clothoQuery" id="clothoQuery" onkeypress="return runScript(event)" />
+				</div>
+    			
+			</form>			
+					
+						
+       </div>	   
+	</div>
+    
+   <div class="mainBodyDiv" >
+   	<div class="mainConsole" >
+   	
+   	
+   	<div class="tabs">
+    <ul class="tab-links">
+        <li class="active"><a href="#tab1">Upload Parts</a></li>
+        <li><a href="#tab2">Query Parts</a></li>
+        <li><a href="#tab3">Run Functions</a></li>
+        
+    </ul>
+ 
+    <div class="tab-content">
+        <div id="tab1" class="tab active">
+           	<div align="center">
+  	 	 		<textarea id="gateupload" rows="15" cols="100"> </textarea>
+  	 	 		<br>
+				
+  			</div>
+  		<div align="center">
+			<form>
+ 				<input type="radio" value="AsJSON" name="inputType" id="asJson" checked>As Jason
+ 				<input type="radio" value="Parse" name="inputType" id="parse" >Parse<br>
+			</form>
+			<button id="create" type="button" class="btn btn-success btn-lg">Save</button><br>
+  	 	</div>
+        </div>
+ 
+        <div id="tab2" class="tab">
+            <p>Tab #2 content goes here!</p>
+        </div>
+ 
+        <div id="tab3" class="tab">
+            <p>Tab #3 content goes here!</p>
+        </div>
+        
+    </div>
+</div>
+  	   
+  	 	</div>
+  	 
+  	 	<div class="debugConsole" >
+  	 	<div align="center">
+  	 	 	<p style="font-size:20px;"> <b>Debug Console</b></p> 
+ 			<textarea id="outputWindow" style="width:50%; min-height:200px; height:100%; background-color:#9CFFA4;float:left" ></textarea> 	 	
+			<textarea id="debugWindow" style="width:49%; min-height:200px; height:100%; background-color:#E31010;float:left" ></textarea> 	 	
+			
+  	 	</div>
+  	   </div>
+  	</div>
+	<script>
                 $(document).ready(function() {
                     //alert("Clicked on The connect button"); 
                     $("#connect").click(function() {
@@ -146,6 +242,7 @@
                                 var gatecomp = gateparts[gateparts.length - 1].split(":");
                                 gtstring += ("\"" + gatecomp[0] + "\":\"" + gatecomp[1] + "\"");
                                 gtstring += "}"
+                                alert(gtstring);
                                 obj = JSON.parse(gtstring);
                                 Clotho.create(obj);
                             }
@@ -195,72 +292,6 @@
                     });
                 });
             </script>    
-    </head>
-
-
-    <body>
-    
-   
-    
-	<div class="menuDiv" >
-		<div style="white-space: nowrap;" align="center" >
-			<h1 class="nameHeader">Clotho - MIT-BroadFoundry Demo</h1> 			
-       </div>	   
-	</div>
-    
-   <div class="mainBodyDiv" >
-   	<div class="mainConsole" >
-   	
-   	
-   	<div class="tabs">
-    <ul class="tab-links">
-        <li class="active"><a href="#tab1">Upload Parts</a></li>
-        <li><a href="#tab2">Query Parts</a></li>
-        <li><a href="#tab3">Run Functions</a></li>
-        
-    </ul>
- 
-    <div class="tab-content">
-        <div id="tab1" class="tab active">
-           	<div align="center">
-  	 	 		<textarea id="gateupload" rows="15" cols="60"> </textarea>
-  	 	 		<br>
-				<input type="file"  id="gateuploadbtn">
-				<input type="button" value="Upload Sample File" onclick="readSampleGatesFile()">
-				<input type="submit" id="submitbtn" onclick="onSubmitBtnClick()" />
-  			</div>
-  		<div align="center">
-			<form>
- 				<input type="radio" value="AsJSON" name="inputType" id="asJson" checked>As Jason
- 				<input type="radio" value="Parse" name="inputType" id="parse" >Parse<br>
-			</form>
-			<button id="create" type="button" class="btn btn-success btn-lg">Save</button><br>
-  	 	</div>
-        </div>
- 
-        <div id="tab2" class="tab">
-            <p>Tab #2 content goes here!</p>
-        </div>
- 
-        <div id="tab3" class="tab">
-            <p>Tab #3 content goes here!</p>
-        </div>
-        
-    </div>
-</div>
-  	   
-  	 	</div>
-  	 
-  	 	<div class="debugConsole" >
-  	 	<div align="center">
-  	 	 	<p style="font-size:20px;"> <b>Debug Console</b></p> 
- 			<textarea id="debugWindow" style="width:50%; min-height:200px; height:100%; background-color:#9CFFA4;float:left" ></textarea> 	 	
-			<textarea id="outputWindow" style="width:49%; min-height:200px; height:100%; background-color:#E31010;float:left" ></textarea> 	 	
-			
-  	 	</div>
-  	   </div>
-  	</div>
-	
 	
  	</body>
 </html>
