@@ -1,92 +1,92 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Clotho-Cello Interface</title>
-        <script type="text/javascript" src="../JS/clotho3API.js"></script>
-        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/q.js/1.0.0/q.js"></script>
-        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-        <script >
-            function onSubmitBtnClick()
+<head>
+    <meta charset="utf-8">
+    <title>Clotho-Cello Interface</title>
+    <script type="text/javascript" src="../JS/clotho3API.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/q.js/1.0.0/q.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script >
+    function onSubmitBtnClick()
+    {
+        var text = document.getElementById("gateupload").value;
+        window.alert(text);
+    }
+    function onUploadFileClick()
+    {
+        if (!(window.File && window.FileReader && window.FileList && window.Blob))
+        {
+            alert('File APIs are not fully supported in this browser. This may cause issues.');
+        }
+    }
+    window.onload = function()
+    {
+        var fileinput = document.getElementById('gateuploadbtn');
+        var gatetextarea = document.getElementById('gateupload');
+        fileinput.addEventListener('change',
+            function(e)
             {
-                var text = document.getElementById("gateupload").value;
-                window.alert(text);
-            }
-            function onUploadFileClick()
-            {
-                if (!(window.File && window.FileReader && window.FileList && window.Blob))
+                var file = fileinput.files[0];
+                var textType = /text.*/;
+                if (file.type.match(textType))
                 {
-                    alert('File APIs are not fully supported in this browser. This may cause issues.');
-                }
-            }
-            window.onload = function()
-            {
-                var fileinput = document.getElementById('gateuploadbtn');
-                var gatetextarea = document.getElementById('gateupload');
-                fileinput.addEventListener('change',
-                        function(e)
-                        {
-                            var file = fileinput.files[0];
-                            var textType = /text.*/;
-                            if (file.type.match(textType))
-                            {
-                                var fileReader = new FileReader();
-                                fileReader.onload = function(e)
-                                {
-                                    gatetextarea.innerText = fileReader.result;
-                                }
-                                fileReader.readAsText(file);
-                            }
-                            else
-                            {
-                                alert("Please Upload a Valid Text file");
-                            }
-                        });
-            }
-
-            function readSampleGatesFile()
-            {
-                var gatetextarea = document.getElementById('gateupload');
-                var txtFile = new XMLHttpRequest();
-                txtFile.open("GET", "http://prashantvaidyanathan.github.io/resources/SampleGates.txt", true);
-                txtFile.onreadystatechange = function()
-                {
-                    if (txtFile.readyState === 4)
+                    var fileReader = new FileReader();
+                    fileReader.onload = function(e)
                     {
-                        if (txtFile.status === 200)
-                        {
-                            allText = txtFile.responseText;
-                            gatetextarea.innerText = allText;
-                        }
+                        gatetextarea.innerText = fileReader.result;
                     }
+                    fileReader.readAsText(file);
                 }
-                txtFile.send(null);
+                else
+                {
+                    alert("Please Upload a Valid Text file");
+                }
+            });
+    }
+
+    function readSampleGatesFile()
+    {
+        var gatetextarea = document.getElementById('gateupload');
+        var txtFile = new XMLHttpRequest();
+        txtFile.open("GET", "http://prashantvaidyanathan.github.io/resources/SampleGates.txt", true);
+        txtFile.onreadystatechange = function()
+        {
+            if (txtFile.readyState === 4)
+            {
+                if (txtFile.status === 200)
+                {
+                    allText = txtFile.responseText;
+                    gatetextarea.innerText = allText;
+                }
             }
+        }
+        txtFile.send(null);
+    }
 
-        </script>
+    </script>
 
-    </head>
-
-
-    <body>
+</head>
 
 
-        <div align="center">
-            <h1 style="font-family:Arial, Helvetica, sans-serif;">Upload Cello Gates</h1> 
+<body>
 
-            <input id="username" type = "text"/> Username 
-            <input id="passwd" type = "password"/> Password <br>
-            <button id="connect" type="button" class="btn btn-primary btn-lg">Connect</button><br>
-            <textarea id="gateupload" rows="30" cols="60"> </textarea>
-        </div>
-        <div align="center">
-            <input type="file"  id="gateuploadbtn">
-            <input type="button" value="Upload Sample File" onclick="readSampleGatesFile()">
-            <input type="submit" id="submitbtn" onclick="onSubmitBtnClick()" />
-        </div>
 
-        <div align="center">
+    <div align="center">
+        <h1 style="font-family:Arial, Helvetica, sans-serif;">Upload Cello Gates</h1> 
+
+        <input id="username" type = "text"/> Username 
+        <input id="passwd" type = "password"/> Password <br>
+        <button id="connect" type="button" class="btn btn-primary btn-lg">Connect</button><br>
+        <textarea id="gateupload" rows="30" cols="60"> </textarea>
+    </div>
+    <div align="center">
+        <input type="file"  id="gateuploadbtn">
+        <input type="button" value="Upload Sample File" onclick="readSampleGatesFile()">
+        <input type="submit" id="submitbtn" onclick="onSubmitBtnClick()" />
+    </div>
+
+    <div align="center">
 
             <!--
             <button id="query" type="button" class="btn btn-success btn-lg">Query</button>
@@ -94,21 +94,21 @@
             <button id="set" type="button" class="btn btn-success btn-lg">Set</button>
             <button id="createAll" type="button" class="btn btn-success btn-lg">Create All</button>
             <button id="queryOne" type="button" class="btn btn-success btn-lg">Query One</button>
-            -->
+        -->
 
-            <button id="create" type="button" class="btn btn-success btn-lg">Create</button><br>
+        <button id="create" type="button" class="btn btn-success btn-lg">Create</button><br>
 
-            <input id="bgname" type = "text"/> Gate Name 
-            <button id="get" type="button" class="btn btn-success btn-lg">Get</button><br>
-            <input id="pmax" type = "text"/> pMin 
-            <input id="pmin" type = "text"/> pMax <br>
-            <input id="kd" type = "text"/> kd 
-            <input id="gaten" type = "text"/> n 
+        <input id="bgname" type = "text"/> Gate Name 
+        <button id="get" type="button" class="btn btn-success btn-lg">Get</button><br>
+        <input id="pmax" type = "text"/> pMin 
+        <input id="pmin" type = "text"/> pMax <br>
+        <input id="kd" type = "text"/> kd 
+        <input id="gaten" type = "text"/> n 
 
 
 
-            <script>
-                $(document).ready(function() {
+        <script>
+        $(document).ready(function() {
                     //alert("Clicked on The connect button"); 
                     $("#connect").click(function() {
                         var usernamedata = document.getElementById('username').value;
@@ -168,37 +168,37 @@
                         //         alert(data.sequence);
                         //     }).done();
                         // });
-                    });
-                    $("#createAll").click(function() {
-                        Clotho.create([{"name": "My New Part", "sequence": "GGGGGG"}, {"name": "My Second Part", "sequence": "AAACCC"}]).then(function(id) {
-                            alert(JSON.stringify(id));
-                        }).done();
-                    });
-                    $("#destroy").click(function() {
-                        Clotho.destroy("My New Part");
-                    });
-                    $("#set").click(function() {
-                        Clotho.get("Test Part 1").then(function(data) {
-                            alert(data.name);
-                            storeID = data.id;
-                            Clotho.set({"id": storeID, "name": "Kev's Trial Part"}).then(function(data2) {
-                                Clotho.get(storeID).then(function(data3) {
-                                    alert(data3.name);
-                                    Clotho.set({"id": storeID, "name": "Test Part 1"}).then(function(data4) {
-                                        Clotho.get(storeID).then(function(data5) {
-                                            alert(data5.name);
-                                        }).done()
-                                    });
-                                });
-                            });
-                        });
-                    });
+});
+$("#createAll").click(function() {
+    Clotho.create([{"name": "My New Part", "sequence": "GGGGGG"}, {"name": "My Second Part", "sequence": "AAACCC"}]).then(function(id) {
+        alert(JSON.stringify(id));
+    }).done();
+});
+$("#destroy").click(function() {
+    Clotho.destroy("My New Part");
+});
+$("#set").click(function() {
+    Clotho.get("Test Part 1").then(function(data) {
+        alert(data.name);
+        storeID = data.id;
+        Clotho.set({"id": storeID, "name": "Kev's Trial Part"}).then(function(data2) {
+            Clotho.get(storeID).then(function(data3) {
+                alert(data3.name);
+                Clotho.set({"id": storeID, "name": "Test Part 1"}).then(function(data4) {
+                    Clotho.get(storeID).then(function(data5) {
+                        alert(data5.name);
+                    }).done()
                 });
-            </script>    
-        </div>
+            });
+        });
+    });
+});
+});
+</script>    
+</div>
 
 
 
 
-    </body>
+</body>
 </html>
