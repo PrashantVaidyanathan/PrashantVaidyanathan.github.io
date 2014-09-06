@@ -85,6 +85,16 @@ e.preventDefault();
     }
 
     </script>
+    <script type="text/javascript">
+        function inputFocus(i)
+        {
+            if(i.value == i.defaultValue){i.value="";i.style.color="#000;"}
+        }
+        function inputBlur(i)
+        {
+            if(i.value=""){i.value=i.defaultValue; i.style.color="#888";}
+        }
+    </script>
 
 </head>
 
@@ -138,7 +148,13 @@ e.preventDefault();
                     </div>
 
                     <div id="tab2" class="tab">
-                        <p>Tab #2 content goes here!</p>
+                        <div align="center">
+                            <input type="text" name="searchName" title="Search" style="color:#888;" value="Search" onfocus="inputFocus(this)" onblur="inputBlur(this)">
+                            <br>
+                        </div>
+                        <div align="center">
+                            <textarea id="queryResults" class="queryResults" rows="15" cols="70"> </textarea>
+                        </div>
                     </div>
 
                     <div id="tab3" class="tab">

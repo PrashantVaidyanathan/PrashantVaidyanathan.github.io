@@ -61,8 +61,17 @@ body
     margin-bottom: 5px;  
 
 }
+.searchText
+{
+    vertical-align: middle;
+    border-radius: 4px;
+    font-size: 15px;
 
-
+}
+.queryResults
+{
+    font-size: 15px;
+}
 .headerlink{text-decoration:none; text-align:center; 
 
     margin-left:4px;
@@ -186,11 +195,6 @@ body
                 box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;  
 
             }
-
-
-
-
-
 
 
 
