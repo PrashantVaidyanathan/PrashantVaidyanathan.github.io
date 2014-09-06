@@ -118,7 +118,7 @@ e.preventDefault();
 
             <form action="#" align="center">
                 <div align="center">
-                    <input type="text" class="queryText" name="clothoQuery" id="clothoQuery" onkeypress="return runScript(event)" />
+                    <input type="text" class="queryText" name="clothoQuery" id="clothoQuery"  title="Object Id" style="color:#888" value="Object Id" onfocus="inputFocus(this)" onblur="inputBlur(this)" />
                 </div>
 
             </form>         
@@ -168,7 +168,7 @@ e.preventDefault();
                                 <label><b>Schema : </b></label><label id="partSchema"></label><br><br>
                                 <label><b>Details : </b></label>
                             </div>
-                            <textarea id="queryResults" class="queryResults" rows="15" cols="70"> </textarea>
+                            <textarea id="queryResults" class="queryResults" rows="8" cols="70"> </textarea>
                         </div>
                     </div>
 
@@ -221,7 +221,74 @@ $('#clothoQuery').keypress(function (e)
 
 
 
+$('#nameSearch').keypress(function (e) 
+{
+    if (e.keyCode == 13) 
+    {
 
+        document.getElementById('queryResults').value = "";
+        document.getElementById('partName').innerHTML = "";
+        document.getElementById('partId').innerHTML = "";
+        document.getElementById('partSchema').innerHTML = "";
+
+        var text;
+        var queryVal = document.getElementById('nameSearch').value;
+        Clotho.queryOne("name",queryVal).then(function(data) {
+            
+            var found=false;
+            if(data !=null)
+            {
+
+                found = true;  
+                document.getElementById('outputWindow').value += ("Data :\n" + JSON.stringify(data) +"\n");  
+                document.getElementById('debugWindow').value += ("Query Object Found\n");                                 
+                if(data.name !=null)
+                {
+                    document.getElementById('partName').innerHTML  = data.name;
+                }
+                if(data.id !=null)
+                {
+                    document.getElementById('partId').innerHTML  = data.id;
+                }
+                if(data.schema !=null)
+                {
+                    document.getElementById('partSchema').innerHTML  = data.schema;
+                }
+                if(data.type != null)
+                {
+                    document.getElementById('queryResults').value +=  ("Type : " + data.type+"\n");                    
+                }
+                if(data.seq != null)
+                {
+                    document.getElementById('queryResults').value +=  ("Sequence : " + data.seq+"\n");                    
+                }
+                document.getElementById('queryResults').value +=  ("\nOther Details: \n");                    
+                var jsonString = JSON.stringify(data);
+                var jsonMap = JSON.parse(jsonString);
+                var i=0;
+                for (var key in jsonMap) 
+                {
+                    if (jsonMap.hasOwnProperty(key)) 
+                    {
+                        if( (key !== "name") && (key !== "id") && (key !== "schema") && (key !== "seq") && (key !== "type"))
+                        {
+                            document.getElementById('queryResults').value +=  (key + " : " + jsonMap[key]+"\n"); 
+                        }
+                    }
+                }       
+                
+                 
+            }
+            if(!found)
+            {
+                document.getElementById('outputWindow').value += ("No results obtained for Query : " + queryVal+"\n");  
+            }
+            document.getElementById('nameSearch').value = ""; 
+        }).done();
+        
+        return false;
+    }   
+});
 
 $("#create").click(function() {
 
