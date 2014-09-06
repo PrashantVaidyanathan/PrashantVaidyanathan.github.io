@@ -88,11 +88,19 @@ e.preventDefault();
     <script type="text/javascript">
         function inputFocus(i)
         {
-            if(i.value == i.defaultValue){i.value="";i.style.color="#000;"}
+            if(i.value == i.defaultValue)
+            {
+                i.value = "";
+                i.style.color = "#000";
+            }
         }
         function inputBlur(i)
         {
-            if(i.value=""){i.value=i.defaultValue; i.style.color="#888";}
+            if(i.value == "")
+            {
+                i.value = i.defaultValue; 
+                i.style.color = "#888";
+            }
         }
     </script>
 
@@ -113,10 +121,10 @@ e.preventDefault();
                     <input type="text" class="queryText" name="clothoQuery" id="clothoQuery" onkeypress="return runScript(event)" />
                 </div>
 
-            </form>			
+            </form>         
 
 
-        </div>	   
+        </div>     
     </div>
 
     <div class="mainBodyDiv" >
@@ -148,11 +156,18 @@ e.preventDefault();
                     </div>
 
                     <div id="tab2" class="tab">
-                        <div align="center">
-                            <input type="text" name="searchName" title="Search" style="color:#888;" value="Search" onfocus="inputFocus(this)" onblur="inputBlur(this)">
+                       <div >
+                            <input type="text" id="nameSearch" name="searchName" title="Search" style="color:#888;font-size:15px" value="Search" onfocus="inputFocus(this)" onblur="inputBlur(this)">
+                            <br>
                             <br>
                         </div>
-                        <div align="center">
+                        <div >
+                            <div id="partDetailsArea" class="partDetails" style="min-width:400px" >
+                                <label><b>Name : </b></label><label id="partName"></label><br>
+                                <label><b>Id : </b></label><label id="partId"></label><br>
+                                <label><b>Schema : </b></label><label id="partSchema"></label><br><br>
+                                <label><b>Details : </b></label>
+                            </div>
                             <textarea id="queryResults" class="queryResults" rows="15" cols="70"> </textarea>
                         </div>
                     </div>
@@ -169,8 +184,8 @@ e.preventDefault();
         <div class="debugConsole" >
             <div align="center">
                 <p style="font-size:20px;"> <b>Debug Console</b></p> 
-                <textarea id="outputWindow" style="width:50%; min-height:200px; height:100%; background-color:#9CFFA4;float:left" ></textarea> 	 	
-                <textarea id="debugWindow" style="width:49%; min-height:200px; height:100%; background-color:#E31010;float:left" ></textarea> 	 	
+                <textarea id="outputWindow" style="width:50%; min-height:200px; height:100%; background-color:#9CFFA4;float:left" ></textarea>      
+                <textarea id="debugWindow" style="width:49%; min-height:200px; height:100%; background-color:#E31010;color:#FFF;float:left" ></textarea>       
 
             </div>
         </div>
@@ -179,10 +194,6 @@ e.preventDefault();
     $(document).ready(function() {
 
 
-//alert("Clicked on The connect button"); 
-$("#connect").click(function() {
-    alert("Connecting");
-});
 
 
 $('#clothoQuery').keypress(function (e) 
@@ -196,7 +207,7 @@ $('#clothoQuery').keypress(function (e)
             if(data !=null)
             {
                 document.getElementById('debugWindow').value += ("Object Found. Name: "+data.name+" \n");  
-                found = true;    								
+                found = true;                                   
             }
             if(!found)
             {
@@ -205,36 +216,13 @@ $('#clothoQuery').keypress(function (e)
             document.getElementById('clothoQuery').value = "";
         }).done();
         return false;
-    }	
+    }   
 });
 
 
-$("#get").click(function() {
-    alert("Button clicked!");
-    var querydata = document.getElementById('bgname').value;
-    alert(querydata);
-    Clotho.get(querydata).then(function(data) {
-        alert(data);
-        alert(data.pMax);
-        alert(data.pMin);
-        alert(data.kd);
-        alert(data.n);
-        document.getElementById('pmax').value = data.pMax;
-        document.getElementById('pmin').value = data.pMin;
-        document.getElementById('kd').value = data.kd;
-        document.getElementById('gaten').value = data.n;
-    }).done();
-});
-$("#query").click(function() {
-    Clotho.query("schema", "CompositePart").then(function(data) {
-        alert(data.length);
-    }).done();
-});
-$("#queryOne").click(function() {
-    Clotho.queryOne("schema", "CompositePart").then(function(data) {
-        alert(data.name);
-    }).done();
-});
+
+
+
 $("#create").click(function() {
 
     var gatelines = document.getElementById('gateupload').value;
@@ -264,54 +252,20 @@ $("#create").click(function() {
             var gatecomp = gateparts[gateparts.length - 1].split(":");
             gtstring += ("\"" + gatecomp[0] + "\":\"" + gatecomp[1] + "\"");
             gtstring += "}"
-            alert(gtstring);
+            document.getElementById('outputWindow').value += (gtstring + "\n");
             obj = JSON.parse(gtstring);
             Clotho.create(obj);
         }
     }
-/*stringobj = "{\"name\":\"stringate\",\"randomprop\":\"3.142567\"}";
-obj = JSON.parse(stringobj);
-Clotho.create(obj);
-obj = [{"name":"trygate2", "prop1":"3.456", "subprop": {"attr1":"42", "reason":"Answer to life"}, "prop2":"Success"}];
-Clotho.create(obj);*/
 
 var textmessage = gatearray.length + " Gates added.";
-alert(textmessage);
-//obj = {"name":"NOT_rbs1-PhlF", "pMax":"17.22043" , "pMin":"0.073805" , "kd":"0.560868" , "n":"3.876935" };
-//Clotho.create(obj);
-//Clotho.get("NOT_rbs1-PhlF").then(function(data) {
-//    alert(data.n);
-//}).done();
-// Clotho.create(obj).then(function(id) {
-//     Clotho.get(id).then(function(data) {
-//         alert(data.sequence);
-//     }).done();
-// });
+document.getElementById('outputWindow').value += (textmessage + "\n"); 
 });
-$("#createAll").click(function() {
-    Clotho.create([{"name": "My New Part", "sequence": "GGGGGG"}, {"name": "My Second Part", "sequence": "AAACCC"}]).then(function(id) {
-        alert(JSON.stringify(id));
-    }).done();
-});
-$("#destroy").click(function() {
-    Clotho.destroy("My New Part");
-});
-$("#set").click(function() {
-    Clotho.get("Test Part 1").then(function(data) {
-        alert(data.name);
-        storeID = data.id;
-        Clotho.set({"id": storeID, "name": "Kev's Trial Part"}).then(function(data2) {
-            Clotho.get(storeID).then(function(data3) {
-                alert(data3.name);
-                Clotho.set({"id": storeID, "name": "Test Part 1"}).then(function(data4) {
-                    Clotho.get(storeID).then(function(data5) {
-                        alert(data5.name);
-                    }).done()
-                });
-            });
-        });
-    });
-});
+
+
+
+
+
 });
 </script>    
 
