@@ -159,7 +159,7 @@ e.preventDefault();
                        <div >
                             <input type="text" id="nameSearch" name="searchName" title="Search" style="color:#888;font-size:15px" value="Search" onfocus="inputFocus(this)" onblur="inputBlur(this)">
                             <br>
-                            <br>
+                            
                         </div>
                         <div >
                             <div id="partDetailsArea" class="partDetails" style="min-width:400px" >
@@ -173,7 +173,28 @@ e.preventDefault();
                     </div>
 
                     <div id="tab3" class="tab">
-                        <p>Tab #3 content goes here!</p>
+                        <div >
+
+                                <input type="text" id="funcArgument" name="argument" title="Arguments" style="color:#888;font-size:15px;width:350px;margin-right:10px;" value="Arguments" onfocus="inputFocus(this)" onblur="inputBlur(this)"> 
+                                <button id="runFunction" type="button" class="button">Run</button>
+                            
+                            <br>
+                            
+                        </div>
+                        <div >
+                            <div id="functionDetails" class="partDetails" style="min-width:400px" >
+                                <label><b>Function : </b></label>
+                            </div>
+                            <textarea id="funtionVal" class="queryResults" rows="8" cols="70"> </textarea> <br>
+                            <br>
+                            
+                            <div id="functionDetails" class="partDetails" style="min-width:400px" >
+                                <label><b>Output : </b></label>
+                            </div>
+                            <textarea id="funtionResults" class="queryResults" rows="3" cols="70"> </textarea> <br>
+                            
+                        </div>
+
                     </div>
 
                 </div>
