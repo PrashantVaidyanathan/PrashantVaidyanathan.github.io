@@ -1,0 +1,17 @@
+Gates:
+name:P3 type:Promoter seq:taatacaactcactagagagaga REU:0.025 REU_SD:0.009 schema:org.clothocad.model.BroadMITPart
+name:P2 type:Promoter seq:taatacgactcactagagagaga REU:0.084 REU_SD:0.037
+name:Rm1 type:RBS seq:tcagagactgaagttattacccaggaggtctata REU:0.26 REU_SD:0.07
+name:S0 type:Spacer seq:gctccagtacatctaacggggcagtatccgcggcaagtcctagtccaatc
+
+
+Functions:
+ 
+Reverse:
+function(sequence) { return sequence.split('').reverse().join('');};
+
+RevComp: 
+function(string) { var map = {a : 't', t : 'a', c : 'g', g : 'c', A : 'T', T : 'A', C : 'G', G : 'C' }; var reversed = string.split('').reverse().join(''); return reversed.replace(/[acgt]/gi, function(i) {return map[i]});  };
+
+
+

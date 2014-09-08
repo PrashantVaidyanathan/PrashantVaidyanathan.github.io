@@ -179,7 +179,7 @@
          * @param {Object}
          */
          submit: function(script) {
-            return socket.emit("submit", script);
+            return socket.emit("submit", {"query":script});
         },
 
         /**

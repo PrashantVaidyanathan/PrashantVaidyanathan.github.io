@@ -191,7 +191,7 @@ e.preventDefault();
                             <div id="functionDetails" class="partDetails" style="min-width:400px" >
                                 <label><b>Output : </b></label>
                             </div>
-                            <textarea id="funtionResults" class="queryResults" rows="3" cols="70"> </textarea> <br>
+                            <textarea id="functionResults" class="queryResults" rows="3" cols="70"> </textarea> <br>
                             
                         </div>
 
@@ -240,6 +240,43 @@ $('#clothoQuery').keypress(function (e)
     }   
 });
 
+//data.name = \"reverse1\";\n"
+//               + "data.language = \"JAVASCRIPT\";\n"
+//                + "data.schema = \"org.clothocad.core.datums.Function\";\n"
+//                + "data.code = \"function(sequence) { return sequence.split('').reverse().join('');};\";\n"
+//                + "data.arguments = [{name:'sequence', type:'String'}];\n"
+
+
+$('#runFunction').click(function()
+{
+
+    var argumentVal = document.getElementById('funcArgument').value;
+    var codeVal = document.getElementById('funtionVal').value;
+    var script = "var data = {};\n"
+                + "data.name = \"functionX\";\n"
+                + "data.language = \"JAVASCRIPT\";\n"
+                + "data.schema = \"org.clothocad.core.datums.Function\";\n"
+                + "data.code = \"" + codeVal + "\";\n"
+                + "data.arguments = [{name:'sequence', type:'String'}];\n"
+                + "\n"
+                + "functionX = clotho.create(data);\n"
+                + "\n"
+                + "clotho.run(functionX, [\"" + argumentVal + "\"]);";
+    
+
+    document.getElementById('outputWindow').value += ("\nArguments :\n" + argumentVal +"\n");  
+    document.getElementById('outputWindow').value += ("\nScript :\n" + script +"\n");  
+
+
+    
+
+    Clotho.submit(script).then(function(data) {
+        document.getElementById('functionResults').value = data;
+        document.getElementById('outputWindow').value += ("\nOutput :\n" + data +"\n");  
+
+    }).done();
+    
+});
 
 
 $('#nameSearch').keypress(function (e) 
