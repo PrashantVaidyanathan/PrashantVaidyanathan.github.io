@@ -15,76 +15,18 @@
         jQuery('.tabs .tab-links a').on('click', function(e)  {
             var currentAttrValue = jQuery(this).attr('href');
 
-// Show/Hide Tabs
-jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+            // Show/Hide Tabs
+            jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
 
-// Change/remove current tab to active
-jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+            // Change/remove current tab to active
+            jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
 
-e.preventDefault();
-});
+            e.preventDefault();
+        });
     });
     </script>
 
 
-    <script >
-    function onSubmitBtnClick()
-    {
-        var text = document.getElementById("gateupload").value;
-        window.alert(text);
-    }
-    function onUploadFileClick()
-    {
-        if (!(window.File && window.FileReader && window.FileList && window.Blob))
-        {
-            alert('File APIs are not fully supported in this browser. This may cause issues.');
-        }
-    }
-    window.onload = function()
-    {
-        var fileinput = document.getElementById('gateuploadbtn');
-        var gatetextarea = document.getElementById('gateupload');
-        fileinput.addEventListener('change',
-            function(e)
-            {
-                var file = fileinput.files[0];
-                var textType = /text.*/;
-                if (file.type.match(textType))
-                {
-                    var fileReader = new FileReader();
-                    fileReader.onload = function(e)
-                    {
-                        gatetextarea.innerText = fileReader.result;
-                    }
-                    fileReader.readAsText(file);
-                }
-                else
-                {
-                    alert("Please Upload a Valid Text file");
-                }
-            });
-    }
-
-    function readSampleGatesFile()
-    {
-        var gatetextarea = document.getElementById('gateupload');
-        var txtFile = new XMLHttpRequest();
-        txtFile.open("GET", "http://prashantvaidyanathan.github.io/resources/SampleBroad.txt", true);
-        txtFile.onreadystatechange = function()
-        {
-            if (txtFile.readyState === 4)
-            {
-                if (txtFile.status === 200)
-                {
-                    allText = txtFile.responseText;
-                    gatetextarea.innerText = allText;
-                }
-            }
-        }
-        txtFile.send(null);
-    }
-
-    </script>
     <script type="text/javascript">
         function inputFocus(i)
         {
@@ -136,7 +78,7 @@ e.preventDefault();
                     <li class="active"><a href="#tab1">Upload Parts</a></li>
                     <li><a href="#tab2">Query Parts</a></li>
                     <li><a href="#tab3">Run Functions</a></li>
-
+                    <li><a href="#tab4">Advanced Functions</a></li>
                 </ul>
 
                 <div class="tab-content">
@@ -149,7 +91,8 @@ e.preventDefault();
                         <div align="center">
                             <form style="margin-bottom:10px;">
                                 <input  type="radio" value="AsJSON" name="inputType" id="asJson" checked> <label style="font-size:20px;margin-right:15px">As Jason</label>
-                                <input type="radio" value="Parse" name="inputType" id="parse"> <label style="font-size:20px;">Parse</label><br>
+                                <input type="radio" value="Parse" name="inputType" id="parse"> <label style="font-size:20px;margin-right:15px">Parse</label>                             
+                                <input type="radio" value="OriginalText" name="inputType" id="parse"> <label style="font-size:20px;">Original Text</label><br>
                             </form>
                             <button id="create" type="button" class="button">Save</button><br>
                         </div>
@@ -192,6 +135,33 @@ e.preventDefault();
                                 <label><b>Output : </b></label>
                             </div>
                             <textarea id="functionResults" class="queryResults" rows="3" cols="70"> </textarea> <br>
+                            
+                        </div>
+
+                    </div>
+
+
+                    <div id="tab4" class="tab">
+                        <div >
+
+                                <input type="text" id="funcNameAdv" name="funcNameAdv" title="FunctionName" style="color:#888;font-size:15px;width:250px;margin-right:10px;" value="Function Name" onfocus="inputFocus(this)" onblur="inputBlur(this)"> 
+                                <input type="text" id="funcArgumentAdv" name="funcArgumentAdv" title="PartName" style="color:#888;font-size:15px;width:350px;margin-right:10px;" value="Part Name" onfocus="inputFocus(this)" onblur="inputBlur(this)"> 
+                                <button id="runFunctionAdv" type="button" class="button">Run</button>
+                            
+                            <br>
+                            
+                        </div>
+                        <div >
+                            <div id="functionDetailsAdv" class="partDetails" style="min-width:400px" >
+                                <label><b>Function : </b></label>
+                            </div>
+                            <textarea id="funtionValAdv" class="queryResults" rows="8" cols="70"> </textarea> <br>
+                            <br>
+                            
+                            <div id="functionDetailsAdv" class="partDetails" style="min-width:400px" >
+                                <label><b>Output : </b></label>
+                            </div>
+                            <textarea id="functionResultsAdv" class="queryResults" rows="3" cols="70"> </textarea> <br>
                             
                         </div>
 
@@ -240,12 +210,6 @@ $('#clothoQuery').keypress(function (e)
     }   
 });
 
-//data.name = \"reverse1\";\n"
-//               + "data.language = \"JAVASCRIPT\";\n"
-//                + "data.schema = \"org.clothocad.core.datums.Function\";\n"
-//                + "data.code = \"function(sequence) { return sequence.split('').reverse().join('');};\";\n"
-//                + "data.arguments = [{name:'sequence', type:'String'}];\n"
-
 
 $('#runFunction').click(function()
 {
@@ -268,8 +232,6 @@ $('#runFunction').click(function()
     document.getElementById('outputWindow').value += ("\nScript :\n" + script +"\n");  
 
 
-    
-
     Clotho.submit(script).then(function(data) {
         document.getElementById('functionResults').value = data;
         document.getElementById('outputWindow').value += ("\nOutput :\n" + data +"\n");  
@@ -277,6 +239,62 @@ $('#runFunction').click(function()
     }).done();
     
 });
+
+
+$('#runFunctionAdv').click(function()
+{
+    
+    var argumentVal = document.getElementById('funcArgumentAdv').value;
+    var codeVal = document.getElementById('funtionValAdv').value;
+    var functionNameVal = document.getElementById('funcNameAdv').value;
+    
+    
+
+    document.getElementById('outputWindow').value += ("\nArguments :\n" + argumentVal +"\n");  
+    
+
+    Clotho.queryOne("name",argumentVal).then(function(dataQ) {
+
+        if(dataQ!=null)
+        {
+            if(dataQ.seq != null)
+            {
+                var script = "var data = {};\n"
+                + "data.name = \""+ functionNameVal   +"\";\n"
+                + "data.language = \"JAVASCRIPT\";\n"
+                + "data.schema = \"org.clothocad.core.datums.Function\";\n"
+                + "data.code = \"" + codeVal + "\";\n"
+                + "data.arguments = [{name:'sequence', type:'String'}];\n"
+                + "\n"
+                + functionNameVal+" = clotho.create(data);\n"
+                + "\n"
+                + "clotho.run("+functionNameVal+", [\"" + dataQ.seq + "\"]);";
+                document.getElementById('outputWindow').value += ("\nScript :\n" + script +"\n");  
+                Clotho.submit(script).then(function(data) {
+                document.getElementById('functionResultsAdv').value = data;
+                document.getElementById('outputWindow').value += ("\nOutput :\n" + data +"\n");
+                }).done();  
+            }
+            else
+            {
+                document.getElementById('debugWindow').value += ("Sequence field is empty\n");  
+            }
+        }
+        else
+        {
+            document.getElementById('debugWindow').value += ("No results obtained\n");  
+        }
+
+    
+                
+    }).done();
+    
+
+    
+    
+});
+
+
 
 
 $('#nameSearch').keypress(function (e) 
@@ -330,12 +348,21 @@ $('#nameSearch').keypress(function (e)
                     {
                         if( (key !== "name") && (key !== "id") && (key !== "schema") && (key !== "seq") && (key !== "type"))
                         {
-                            document.getElementById('queryResults').value +=  (key + " : " + jsonMap[key]+"\n"); 
+                            if(typeof jsonMap[key] == 'object')
+                            {
+                                document.getElementById('queryResults').value +=  (key + " : "+"\n"); 
+                                for(var subkey in jsonMap[key])
+                                {
+                                    document.getElementById('queryResults').value +=  (subkey + " : " + jsonMap[key][subkey]+"\n"); 
+                                }
+                            }
+                            else
+                            {
+                                document.getElementById('queryResults').value +=  (key + " : " + jsonMap[key]+"\n"); 
+                            }
                         }
                     }
                 }       
-                
-                 
             }
             if(!found)
             {
@@ -350,31 +377,31 @@ $('#nameSearch').keypress(function (e)
 
 $("#create").click(function() {
 
-    var gatelines = document.getElementById('gateupload').value;
-    var gatearray = gatelines.split("\n");
+    var entiretext = document.getElementById('gateupload').value;
+    var lineArray = entiretext.split("\n");
 
     if (document.getElementById('asJson').checked)
     {
-        for (var i = 0; i < gatearray.length; i++)
+        for (var i = 0; i < lineArray.length; i++)
         {
-            gateparts = gatearray[i];
-            obj = JSON.parse(gateparts);
+            line = lineArray[i];
+            obj = JSON.parse(line);
             Clotho.create(obj);
         }
     }
     else if (document.getElementById('parse').checked)
     {
-        for (var i = 0; i < gatearray.length; i++)
+        for (var i = 0; i < lineArray.length; i++)
         {
-            var gateparts = gatearray[i].split(" ");
+            var line = lineArray[i].split(" ");
             var gtstring = "";
             gtstring += "{"
-            for (var j = 0; j < gateparts.length - 1; j++)
+            for (var j = 0; j < line.length - 1; j++)
             {
-                var gatecomp = gateparts[j].split(":");
+                var gatecomp = line[j].split(":");
                 gtstring += ("\"" + gatecomp[0] + "\":\"" + gatecomp[1] + "\",");
             }
-            var gatecomp = gateparts[gateparts.length - 1].split(":");
+            var gatecomp = line[line.length - 1].split(":");
             gtstring += ("\"" + gatecomp[0] + "\":\"" + gatecomp[1] + "\"");
             gtstring += "}"
             document.getElementById('outputWindow').value += (gtstring + "\n");
@@ -383,7 +410,9 @@ $("#create").click(function() {
         }
     }
 
-var textmessage = gatearray.length + " Gates added.";
+
+
+var textmessage = lineArray.length + " Gates added.";
 document.getElementById('outputWindow').value += (textmessage + "\n"); 
 });
 
