@@ -12,7 +12,7 @@
     {
         alert('Submit button clicked');
         var txtFile = new XMLHttpRequest();
-        txtFile.open("GET", "http://prashantvaidyanathan.github.io/resources/SampleGates.txt", true);
+        txtFile.open("GET", "http://prashantvaidyanathan.github.io/pages/challenge8/directions.txt", true);
         txtFile.onreadystatechange = function()
         {
             if (txtFile.readyState === 4)
@@ -20,12 +20,13 @@
                 if (txtFile.status === 200)
                 {
                     allText = txtFile.responseText;
+                    alert(allText);
                     //gatetextarea.innerText = allText;
                 }
             }
         }
         txtFile.send(null);
-        alert(allText);
+        
     }
     
     function readSampleGatesFile()
