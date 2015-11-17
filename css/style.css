@@ -5,22 +5,32 @@
 html
 {
     min-height: 100%;
-
+    background-color: #606060;
     position: relative;	
 }
 body
 {
     min-height: 100%;
-
-    background-color: #f0f1ff;
+    background-color: #606060;
 }
 
 
 .menuDiv
 {
-    background-color: #006887;	
+    background-color: #252525;
 
     width: 100%;
+}
+
+p
+{
+    background-color: #606060;
+    color: #ffffff;
+}
+
+.navbar-brand
+{
+    height: 200px;
 }
 
 .mainBodyDiv
@@ -39,11 +49,16 @@ body
     color: #ffffff;
     font-size: 48px;
     font-family: 'Allerta Stencil', sans-serif;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     /*font-family: Impact, Charcoal, sans-serif;*/	 
 }
 
+.indexPara{
+    margin-top: 10px;
+    font-size: 24px;
+    background-color: #606060;
+}
 
 .debugConsole
 {
@@ -83,7 +98,7 @@ body
     font:25px "Lucida Console", Monaco, monospace; 
     font-weight:bold; 
     color:#edffff; 
-    background:#006887; 
+    background:#252525;
     -webkit-box-shadow:0px 0px -20px #ffffff, inset 0px 0px -20px #ffffff; 
     -moz-box-shadow: 0px 0px -20px #ffffff,  inset 0px 0px -20px #ffffff;  
     box-shadow:0px 0px -20px #ffffff, inset 0px 0px -20px #ffffff;  
@@ -112,7 +127,7 @@ body
         font:25px "Lucida Console", Monaco, monospace; 
         font-weight:bold; 
         color:#edffff; 
-        background:#006887; 
+        background:#252525;
         -webkit-box-shadow:0px 0px -20px #bababa, inset 0px 0px -20px #ffffff; 
         -moz-box-shadow: 0px 0px -20px #bababa,  inset 0px 0px -20px #ffffff;  
         box-shadow:0px 0px -20px #bababa, inset 0px 0px -20px #ffffff;  
@@ -135,6 +150,7 @@ body
 
 
     /*Button CSS*/
+    /*
     .button{text-decoration:none; text-align:center; 
         padding:8px 25px; 
         border:solid 1px #004F72; 
@@ -196,11 +212,13 @@ body
                 box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;  
 
             }
-
+    */
 
 
             /*----- Tab Links -----*/
             /* Clearfix */
+
+            /*
             .tab-links:after {
 
                 display:block;
@@ -234,8 +252,10 @@ body
                 background:#fff;
                 color:#4c4c4c;
             }
+            */
 
             /*----- Content of Tabs -----*/
+            /*
             .tab-content {
                 min-height: 300px; 
                 padding:15px;
@@ -250,4 +270,4 @@ body
 
             .tab.active {
                 display:block;
-            }
+            }*/

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html>
 
 <head>
     <title>Prashant Vaidyanathan</title>
@@ -7,61 +7,72 @@
     <link href='http://fonts.googleapis.com/css?family=Allerta+Stencil' rel='stylesheet' type='text/css'>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content="Prashant Vaidyanathan's Personal Webpage">
-    <meta name="author" content="Prashant Vaidyanathan" >
-    <meta name="keywords" content="Prashant Vaidyanathan, Prashant, BITS Dubai, BITS Pilani, BPD, Boston University, CIDAR, cidarlab, engineering, Microsoft">
-    
-    
+    <meta name="author" content="Prashant Vaidyanathan">
+    <meta name="keywords"
+          content="Prashant Vaidyanathan, Prashant, BITS Dubai, BITS Pilani, BPD, Boston University, CIDAR, cidarlab, engineering, Microsoft,prashant, prash, prash@bu.edu">
+    <script src="JS/index.js"></script>
+
+
+    <!--
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    -->
+
+
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-57219570-1', 'auto');
-  ga('send', 'pageview');
+        ga('create', 'UA-57219570-1', 'auto');
+        ga('send', 'pageview');
 
-</script>
-    
-    <script>
-
-    var timerval = setInterval(function() {changePic()}, 15000)
-    function changePic()
-    {
-        var profile_pic = document.getElementById('profilepic');
-        if (profile_pic.src.match("profilepic1"))
-        {
-            profile_pic.src = "resources/pics/profilepic2.jpg"
-        }
-        else
-        {
-            profile_pic.src = "resources/pics/profilepic1.jpg"
-        }
-
-    }
     </script>
+
 </head>
 
-<body >
-    
-    <div class="menuDiv" >
-     <div id="header" style="float:left;margin-left:40px">
-        <img src="resources/pics/profilepic1.jpg" id="profilepic" alt="Profile Pic"  width="134" height="180">
+<body>
+
+
+<div class="menuDiv">
+    <div id="header" style="float:left;margin-left:40px">
+        <img src="resources/pics/profilepic1.jpg" id="profilepic" alt="Profile Pic" width="134" height="180">
     </div>
-    <div style="height:180px;white-space: nowrap;" align="center" >
-        <h1 class="nameHeader">Prashant Vaidyanathan</h1> 
-        <a href="pages/about.html" class="headerlink"/>About Me</a>
-        <a href="pages/projects.html" class="headerlink">Projects</a>
-        <a href="pages/publications.html" class="headerlink">Publications</a>
+    <div style="height:180px;white-space: nowrap;" align="center">
+        <h1 class="nameHeader">Prashant Vaidyanathan</h1>
+
+        <div>
+            <a href="pages/about.html" class="headerlink"/>About Me</a>
+            <a href="pages/projects.html" class="headerlink">Projects</a>
+            <a href="pages/publications.html" class="headerlink">Publications</a>
+            <a href="#" class="headerlink">CV</a>
+
+        </div>
     </div>
-			   <!--
-            <div id="header" style="background-color:#8DBAD1;height:30px;margin-top:20px"  >
-            </div>
-        -->
-    </div>
-    <div class="mainBodyDiv"> 
-      <p>Hey. My name is Prashant and I am a graduate student working as a Research Assistant in the CIDAR Lab in Boston University.</p>
-  </div>
-  <div class="footerportion">
-  </div>
+    <!--
+ <div id="header" style="background-color:#8DBAD1;height:30px;margin-top:20px"  >
+ </div>
+-->
+</div>
+
+<div class="mainBodyDiv">
+    <p class="indexPara" align="center">I am a Ph.D. Candidate working in the Cross-Disciplinary Integration of Design
+        Automation Research (<a href="http://cidarlab.org/">CIDAR</a>) Lab at Boston University. My adviser is <a href="http://cidarlab.org/doug-densmore/">Douglas Densmore (Ph.D.)</a>. My research primarily focuses on synthesis of structural topologies from a given functional specification (in Boolean Algebra or Signal Temporal logic) in Genetic circuits.</p>
+</div>
+
+
+<div class="footerportion">
+
+
+</div>
 </body>
 </html>
