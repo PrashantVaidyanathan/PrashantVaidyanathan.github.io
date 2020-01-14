@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Douglas Densmore | Prashant Vaidyanathan</title>
+    <link>/authors/douglas-densmore/</link>
+      <atom:link href="/authors/douglas-densmore/index.xml" rel="self" type="application/rss+xml" />
+    <description>Douglas Densmore</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 17 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Douglas Densmore</title>
+      <link>/authors/douglas-densmore/</link>
+    </image>
+    
+    <item>
+      <title>Metrics for Signal Temporal Logic Formulae</title>
+      <link>/publication/stlmetrics2018/</link>
+      <pubDate>Mon, 17 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>/publication/stlmetrics2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Computational Workflow for the Automated Generation of Models of Genetic Designs</title>
+      <link>/publication/acsmodeling2018/</link>
+      <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
+      <guid>/publication/acsmodeling2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Grid-based temporal logic inference</title>
+      <link>/publication/gridtli2017/</link>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>/publication/gridtli2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Genetic circuit design automation</title>
+      <link>/publication/cello2016/</link>
+      <pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/publication/cello2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Framework for Genetic Logic Synthesis</title>
+      <link>/publication/gls2015/</link>
+      <pubDate>Sat, 01 Aug 2015 00:00:00 +0000</pubDate>
+      <guid>/publication/gls2015/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
