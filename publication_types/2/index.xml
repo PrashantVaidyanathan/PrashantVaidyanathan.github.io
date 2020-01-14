@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2 | Prashant Vaidyanathan</title>
+    <link>/publication_types/2/</link>
+      <atom:link href="/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
+    <description>2</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 21 May 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>2</title>
+      <link>/publication_types/2/</link>
+    </image>
+    
+    <item>
+      <title>A Computational Workflow for the Automated Generation of Models of Genetic Designs</title>
+      <link>/publication/acsmodeling2018/</link>
+      <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
+      <guid>/publication/acsmodeling2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Genetic circuit design automation</title>
+      <link>/publication/cello2016/</link>
+      <pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/publication/cello2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Framework for Genetic Logic Synthesis</title>
+      <link>/publication/gls2015/</link>
+      <pubDate>Sat, 01 Aug 2015 00:00:00 +0000</pubDate>
+      <guid>/publication/gls2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A new encryption technique for the secured transmission and storage of text information with medical images</title>
+      <link>/publication/encrypt2012/</link>
+      <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
+      <guid>/publication/encrypt2012/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
