@@ -26,7 +26,7 @@ jobs:
     - name: Hugo Actions
       uses: srt32/hugo-action@v0.0.3
       with: 
-        args: "-d public -t academic --cleanDestinationDir"
+        args: "-d public --cleanDestinationDir"
         
     - name: Deploy  
       uses: JamesIves/github-pages-deploy-action@releases/v3
