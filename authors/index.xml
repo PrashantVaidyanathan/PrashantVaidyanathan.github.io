@@ -7,7 +7,7 @@
     <description>Authors</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 13 May 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hud036e253d667841def3d4af41fe46192_1097_512x512_fill_lanczos_center_2.png</url>
       <title>Authors</title>
       <link>/authors/</link>
     </image>
@@ -17,8 +17,12 @@
       <link>/authors/admin/</link>
       <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
       <guid>/authors/admin/</guid>
-      <description>&lt;p&gt;I am a Postdoctoral researcher working in the &lt;a href=&#34;https://www.microsoft.com/en-us/research/project/stationb/&#34;&gt;Biological Computation Group&lt;/a&gt; at &lt;a href=&#34;https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/&#34;&gt;Microsoft Research&lt;/a&gt; where I develop frameworks to help build and understand gene networks in Synthetic Biology. I am currently working on designing a platform for programming biological systems which will be used to design genetic circuits encoded with synthetic decision making capabilities.&lt;/p&gt;
-&lt;p&gt;I received my PhD in Computer Engineering from Boston University in 2019. I was part of the Cross-Disciplinary Integration of Design Automation Research (&lt;a href=&#34;http://cidarlab.org/&#34;&gt;CIDAR&lt;/a&gt;) Lab and worked under &lt;a href=&#34;http://cidarlab.org/doug-densmore/&#34;&gt;Prof. Douglas Densmore (PhD)&lt;/a&gt;. My PhD Dissertation - &amp;ldquo;Functional Synthesis of Genetic Systems&amp;rdquo; focussed on developing computational and mathematical frameworks for the synthesis and design of genetic circuits.&lt;/p&gt;
+      <description>&lt;p&gt;I am a Researcher working in the 
+&lt;a href=&#34;https://www.microsoft.com/en-us/research/project/stationb/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Biological Computation Group&lt;/a&gt; at 
+&lt;a href=&#34;https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Microsoft Research&lt;/a&gt; where I develop frameworks to help build and understand gene networks in Synthetic Biology. I am currently working on designing a platform for programming biological systems which will be used to design genetic circuits encoded with synthetic decision making capabilities.&lt;/p&gt;
+&lt;p&gt;I received my PhD in Computer Engineering from Boston University in 2019. I was part of the Cross-Disciplinary Integration of Design Automation Research (
+&lt;a href=&#34;http://cidarlab.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CIDAR&lt;/a&gt;) Lab and worked under 
+&lt;a href=&#34;http://cidarlab.org/doug-densmore/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Prof. Douglas Densmore (PhD)&lt;/a&gt;. My PhD Dissertation - &amp;ldquo;Functional Synthesis of Genetic Systems&amp;rdquo; focussed on developing computational and mathematical frameworks for the synthesis and design of genetic circuits.&lt;/p&gt;
 &lt;p&gt;I also recieved an MS degree in Computer Engineering from Boston University, Boston, MA, USA in 2014, and a BE (Hons.) degree in Electrical and Electronics engineering from the Birla Institute of Technology and Science in 2012.&lt;/p&gt;
 </description>
     </item>
