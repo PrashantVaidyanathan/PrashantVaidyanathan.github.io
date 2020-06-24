@@ -14,91 +14,91 @@
     
     <item>
       <title>Algorithms for the selection of fluorescent reporters</title>
-      <link>/publications/fpselection2020/</link>
+      <link>/publication/fpselection2020/</link>
       <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
-      <guid>/publications/fpselection2020/</guid>
+      <guid>/publication/fpselection2020/</guid>
       <description></description>
     </item>
     
     <item>
       <title>FPselection</title>
-      <link>/projects/fpselection/</link>
+      <link>/project/fpselection/</link>
       <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
-      <guid>/projects/fpselection/</guid>
+      <guid>/project/fpselection/</guid>
       <description>&lt;p&gt;Molecular biologists rely on the use of fluorescent probes to take measurements of their model systems. These fluorophores fall into various classes (i.e. fluorescent dyes, fluorescent proteins, etc.), but they all share some general properties and require equipment for data acquisition. While they all share some properties, selecting an ideal set of fluorophores for a particular measurement technology or vice versa is a multidimensional problem that is difficult to solve with ad-hoc methods. The fpSelection tool uses a set of algorithms for solving these problems efficiently to design n-color fluorophore panels that are optimized for maximal signal, minimal bleed-through, and other biological parameters for a specific fluorescent measurement instrument.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Scalable dynamic characterization of synthetic gene circuits</title>
-      <link>/publications/dynchar2019/</link>
+      <link>/publication/dynchar2019/</link>
       <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
-      <guid>/publications/dynchar2019/</guid>
+      <guid>/publication/dynchar2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Functional synthesis of genetic systems</title>
-      <link>/publications/phdthesis/</link>
+      <link>/publication/phdthesis/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>/publications/phdthesis/</guid>
+      <guid>/publication/phdthesis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Metrics for Signal Temporal Logic Formulae</title>
-      <link>/publications/stlmetrics2018/</link>
+      <link>/publication/stlmetrics2018/</link>
       <pubDate>Mon, 17 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>/publications/stlmetrics2018/</guid>
+      <guid>/publication/stlmetrics2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A Computational Workflow for the Automated Generation of Models of Genetic Designs</title>
-      <link>/publications/acsmodeling2018/</link>
+      <link>/publication/acsmodeling2018/</link>
       <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
-      <guid>/publications/acsmodeling2018/</guid>
+      <guid>/publication/acsmodeling2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Grid-based temporal logic inference</title>
-      <link>/publications/gridtli2017/</link>
+      <link>/publication/gridtli2017/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>/publications/gridtli2017/</guid>
+      <guid>/publication/gridtli2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cello</title>
-      <link>/projects/cello/</link>
+      <link>/project/cello/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/projects/cello/</guid>
+      <guid>/project/cello/</guid>
       <description>&lt;p&gt;The Cello input is a high-level logic specification written in Verilog, a hardware description language. The code is parsed to generate a truth table, and logic synthesis produces a circuit diagram with the genetically available gate types to implement the truth table. The gates in the circuit are assigned using experimentally characterized genetic gates. In assignment, a predicted circuit score guides a breadth-first search, or a Monte Carlo simulated annealing search. The assignment with the highest score is chosen, and this assignment can be physically implemented in a combinatorial number of different genetic layouts. The Eugene language is used for rule-based constrained combinatorial design of one or more final DNA sequence(s) for the designed circuit.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Genetic circuit design automation</title>
-      <link>/publications/cello2016/</link>
+      <link>/publication/cello2016/</link>
       <pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/publications/cello2016/</guid>
+      <guid>/publication/cello2016/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A Framework for Genetic Logic Synthesis</title>
-      <link>/publications/gls2015/</link>
+      <link>/publication/gls2015/</link>
       <pubDate>Sat, 01 Aug 2015 00:00:00 +0000</pubDate>
-      <guid>/publications/gls2015/</guid>
+      <guid>/publication/gls2015/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A new encryption technique for the secured transmission and storage of text information with medical images</title>
-      <link>/publications/encrypt2012/</link>
+      <link>/publication/encrypt2012/</link>
       <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
-      <guid>/publications/encrypt2012/</guid>
+      <guid>/publication/encrypt2012/</guid>
       <description></description>
     </item>
     

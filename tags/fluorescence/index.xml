@@ -14,17 +14,17 @@
     
     <item>
       <title>Algorithms for the selection of fluorescent reporters</title>
-      <link>/publications/fpselection2020/</link>
+      <link>/publication/fpselection2020/</link>
       <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
-      <guid>/publications/fpselection2020/</guid>
+      <guid>/publication/fpselection2020/</guid>
       <description></description>
     </item>
     
     <item>
       <title>FPselection</title>
-      <link>/projects/fpselection/</link>
+      <link>/project/fpselection/</link>
       <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
-      <guid>/projects/fpselection/</guid>
+      <guid>/project/fpselection/</guid>
       <description>&lt;p&gt;Molecular biologists rely on the use of fluorescent probes to take measurements of their model systems. These fluorophores fall into various classes (i.e. fluorescent dyes, fluorescent proteins, etc.), but they all share some general properties and require equipment for data acquisition. While they all share some properties, selecting an ideal set of fluorophores for a particular measurement technology or vice versa is a multidimensional problem that is difficult to solve with ad-hoc methods. The fpSelection tool uses a set of algorithms for solving these problems efficiently to design n-color fluorophore panels that are optimized for maximal signal, minimal bleed-through, and other biological parameters for a specific fluorescent measurement instrument.&lt;/p&gt;
 </description>
     </item>
