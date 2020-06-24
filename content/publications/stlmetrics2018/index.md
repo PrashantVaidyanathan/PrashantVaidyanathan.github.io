@@ -21,6 +21,8 @@ featured: false
 draft: false
 doi: 10.1109/CDC.2018.8619541
 publication_types: ["1"]
+url_pdf: https://ieeexplore.ieee.org/abstract/document/8619541
+publication: IEEE Conference on Decision and Control
 
 abstract: Signal Temporal Logic (STL) is a formal language for describing a broad range of real-valued, temporal properties in cyber-physical systems. While there has been extensive research on verification and control synthesis from STL requirements, there is no formal framework for comparing two STL formulae. In this paper, we show that under mild assumptions, STL formulae admit a metric space. We propose two metrics over this space based on i) the Pompeiu-Hausdorff distance and ii) the symmetric difference measure and present algorithms to compute them. Alongside illustrative examples, we present an application of these metrics as design quality measures where they are used to compare all the temporal behaviors of a designed system, such as a synthetic genetic circuit, with the “desired” specification.
 
