@@ -5,7 +5,7 @@
     <link>/authors/admin/</link>
       <atom:link href="/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     <description>Prashant Vaidyanathan</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 13 May 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hud036e253d667841def3d4af41fe46192_1097_512x512_fill_lanczos_center_2.png</url>
       <title>Prashant Vaidyanathan</title>
@@ -13,58 +13,74 @@
     </image>
     
     <item>
+      <title>Algorithms for the selection of fluorescent reporters</title>
+      <link>/publications/fpselection2020/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      <guid>/publications/fpselection2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Scalable dynamic characterization of synthetic gene circuits</title>
-      <link>/publication/dynchar2019/</link>
+      <link>/publications/dynchar2019/</link>
       <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/dynchar2019/</guid>
+      <guid>/publications/dynchar2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Functional synthesis of genetic systems</title>
+      <link>/publications/phdthesis/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>/publications/phdthesis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Metrics for Signal Temporal Logic Formulae</title>
-      <link>/publication/stlmetrics2018/</link>
+      <link>/publications/stlmetrics2018/</link>
       <pubDate>Mon, 17 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>/publication/stlmetrics2018/</guid>
+      <guid>/publications/stlmetrics2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A Computational Workflow for the Automated Generation of Models of Genetic Designs</title>
-      <link>/publication/acsmodeling2018/</link>
+      <link>/publications/acsmodeling2018/</link>
       <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
-      <guid>/publication/acsmodeling2018/</guid>
+      <guid>/publications/acsmodeling2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Grid-based temporal logic inference</title>
-      <link>/publication/gridtli2017/</link>
+      <link>/publications/gridtli2017/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>/publication/gridtli2017/</guid>
+      <guid>/publications/gridtli2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Genetic circuit design automation</title>
-      <link>/publication/cello2016/</link>
+      <link>/publications/cello2016/</link>
       <pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/publication/cello2016/</guid>
+      <guid>/publications/cello2016/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A Framework for Genetic Logic Synthesis</title>
-      <link>/publication/gls2015/</link>
+      <link>/publications/gls2015/</link>
       <pubDate>Sat, 01 Aug 2015 00:00:00 +0000</pubDate>
-      <guid>/publication/gls2015/</guid>
+      <guid>/publications/gls2015/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A new encryption technique for the secured transmission and storage of text information with medical images</title>
-      <link>/publication/encrypt2012/</link>
+      <link>/publications/encrypt2012/</link>
       <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
-      <guid>/publication/encrypt2012/</guid>
+      <guid>/publications/encrypt2012/</guid>
       <description></description>
     </item>
     

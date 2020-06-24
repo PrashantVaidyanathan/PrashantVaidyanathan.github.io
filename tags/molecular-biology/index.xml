@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Molecular Biology | Prashant Vaidyanathan</title>
+    <link>/tags/molecular-biology/</link>
+      <atom:link href="/tags/molecular-biology/index.xml" rel="self" type="application/rss+xml" />
+    <description>Molecular Biology</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hud036e253d667841def3d4af41fe46192_1097_512x512_fill_lanczos_center_2.png</url>
+      <title>Molecular Biology</title>
+      <link>/tags/molecular-biology/</link>
+    </image>
+    
+    <item>
+      <title>FPselection</title>
+      <link>/projects/fpselection/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      <guid>/projects/fpselection/</guid>
+      <description>&lt;p&gt;Molecular biologists rely on the use of fluorescent probes to take measurements of their model systems. These fluorophores fall into various classes (i.e. fluorescent dyes, fluorescent proteins, etc.), but they all share some general properties and require equipment for data acquisition. While they all share some properties, selecting an ideal set of fluorophores for a particular measurement technology or vice versa is a multidimensional problem that is difficult to solve with ad-hoc methods. The fpSelection tool uses a set of algorithms for solving these problems efficiently to design n-color fluorophore panels that are optimized for maximal signal, minimal bleed-through, and other biological parameters for a specific fluorescent measurement instrument.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,7 +5,7 @@
     <link>/tags/</link>
       <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hud036e253d667841def3d4af41fe46192_1097_512x512_fill_lanczos_center_2.png</url>
       <title>Tags</title>
@@ -13,18 +13,34 @@
     </image>
     
     <item>
-      <title>Genetic Engineering</title>
-      <link>/tags/genetic-engineering/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/tags/genetic-engineering/</guid>
+      <title>Fluorescence</title>
+      <link>/tags/fluorescence/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      <guid>/tags/fluorescence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Molecular Biology</title>
+      <link>/tags/molecular-biology/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      <guid>/tags/molecular-biology/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Synthetic Biology</title>
       <link>/tags/synthetic-biology/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
       <guid>/tags/synthetic-biology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Genetic Engineering</title>
+      <link>/tags/genetic-engineering/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/genetic-engineering/</guid>
       <description></description>
     </item>
     

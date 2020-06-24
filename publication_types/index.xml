@@ -5,7 +5,7 @@
     <link>/publication_types/</link>
       <atom:link href="/publication_types/index.xml" rel="self" type="application/rss+xml" />
     <description>Publication_types</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 13 May 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hud036e253d667841def3d4af41fe46192_1097_512x512_fill_lanczos_center_2.png</url>
       <title>Publication_types</title>
@@ -15,8 +15,16 @@
     <item>
       <title>3</title>
       <link>/publication_types/3/</link>
-      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
       <guid>/publication_types/3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>7</title>
+      <link>/publication_types/7/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>/publication_types/7/</guid>
       <description></description>
     </item>
     
