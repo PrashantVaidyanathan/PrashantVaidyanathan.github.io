@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors:
 - Curtis Madsen
-- admin
+- Prashant Vaidyanathan
 - Sadra Sadraddini
 - Cristian-Ioan Vasile
 - Nicholas A. DeLateur

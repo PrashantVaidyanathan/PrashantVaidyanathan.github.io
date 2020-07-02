@@ -8,7 +8,7 @@ authors:
 - Göksel Misirli
 - Tramy Nguyen
 - James Alastair McLaughlin
-- admin
+- Prashant Vaidyanathan
 - Timothy S. Jones
 - Douglas Densmore
 - Chris Myers

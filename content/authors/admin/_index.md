@@ -15,7 +15,7 @@ role: Researcher
 # Organizations/Affiliations
 organizations:
 - name: Microsoft Research
-  url: "https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/"
+  url: "https://www.microsoft.com/en-us/research/people/t-prva/"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include distributed robotics, mobile computing and programmable matter.

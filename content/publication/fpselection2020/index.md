@@ -5,7 +5,7 @@ title: "Algorithms for the selection of fluorescent reporters"
 subtitle: ""
 summary: ""
 authors:
-- admin
+- Prashant Vaidyanathan
 - Evan Appleton
 - David Tran
 - Alexander Vahid

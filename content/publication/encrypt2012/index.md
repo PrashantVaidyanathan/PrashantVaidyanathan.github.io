@@ -5,7 +5,7 @@ title: "A new encryption technique for the secured transmission and storage of t
 subtitle: ""
 summary: ""
 authors:
-- admin
+- Prashant Vaidyanathan
 - Nitish Malhotra
 - Jagadish Nayak
 tags: []

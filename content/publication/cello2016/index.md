@@ -8,7 +8,7 @@ authors:
 - Alec AK Nielsen
 - Bryan S. Der
 - Jonghyeon Shin
-- admin
+- Prashant Vaidyanathan
 - Vanya Paralanov
 - Elizabeth A. Strychalski
 - David Ross

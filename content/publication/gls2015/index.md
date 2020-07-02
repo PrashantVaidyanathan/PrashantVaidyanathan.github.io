@@ -5,7 +5,7 @@ title: "A Framework for Genetic Logic Synthesis"
 subtitle: ""
 summary: ""
 authors:
-- admin
+- Prashant Vaidyanathan
 - Bryan S Der
 - Swapnil Bhatia
 - Nicholas Roehner

@@ -5,7 +5,7 @@ title: "Grid-based temporal logic inference"
 subtitle: ""
 summary: ""
 authors:
-- admin
+- Prashant Vaidyanathan
 - Rachael Ivison
 - Giuseppe Bombara
 - Nicholas A. DeLateur

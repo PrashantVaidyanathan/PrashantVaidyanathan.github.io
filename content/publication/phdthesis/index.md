@@ -5,7 +5,7 @@ title: "Functional synthesis of genetic systems"
 subtitle: ""
 summary: ""
 authors:
-- admin
+- Prashant Vaidyanathan
 tags: []
 categories: []
 date: 2019-01-25T00:00:00Z
