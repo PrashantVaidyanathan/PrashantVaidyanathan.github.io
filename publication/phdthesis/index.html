@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!DOCTYPE html><html lang="en-us" >
 
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 4.7.0">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
 
   
 
@@ -21,7 +20,7 @@
   
   
 
-  <meta name="author" content="Prashant Vaidyanathan">
+  
 
   
   
@@ -51,7 +50,7 @@
   
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
     
@@ -63,8 +62,8 @@
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
         
       
     
@@ -190,7 +189,11 @@
   
   
   
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono&display=swap">
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono&display=swap">
+    
   
 
   
@@ -213,13 +216,15 @@
       dataLayer.push(arguments);
   }
 
-  function trackOutboundLink(url) {
+  function trackOutboundLink(url, target) {
     gtag('event', 'click', {
          'event_category': 'outbound',
          'event_label': url,
          'transport_type': 'beacon',
          'event_callback': function () {
-           document.location = url;
+           if (target !== '_blank') {
+             document.location = url;
+           }
          }
     });
     console.debug("Outbound link clicked: " + url);
@@ -229,7 +234,7 @@
     if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
       return;
     }
-    trackOutboundLink(event.target);  
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
   }
 
   gtag('js', new Date());
@@ -244,6 +249,9 @@
 
 
   
+  
+
+  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/images/icon_hud036e253d667841def3d4af41fe46192_1097_32x32_fill_lanczos_center_2.png">
@@ -251,6 +259,8 @@
 
   <link rel="canonical" href="/publication/phdthesis/">
 
+  
+  
   
   
   
@@ -287,8 +297,6 @@
 
 
 
-
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -312,7 +320,7 @@
     "name": "Prashant Vaidyanathan",
     "logo": {
       "@type": "ImageObject",
-      "url": "img//"
+      "url": "/images/icon_hud036e253d667841def3d4af41fe46192_1097_192x192_fill_lanczos_center_2.png"
     }
   },
   "description": "Synthetic genetic regulatory networks (or genetic circuits) can operate in complex biochemical environments to process and manipulate biological information to produce a desired behavior. The ability to engineer such genetic circuits has wide-ranging applications in various fields such as therapeutics, energy, agriculture, and environmental remediation. However, engineering multilevel genetic circuits quickly and reliably is a big challenge in the field of synthetic biology. This difficulty can partly be attributed to the growing complexity of biology. But some of the predominant challenges include the absence of formal specifications -- that describe precise desired behavior of these biological systems, as well as a lack of computational and mathematical frameworks -- that enable rapid in-silico design and synthesis of genetic circuits. This thesis introduces two major frameworks to reliably design genetic circuits. The first implementation focuses on a framework that enables synthetic biologists to encode Boolean logic functions into living cells. Using high-level hardware description language to specify the desired behavior of a genetic logic circuit, this framework describes how, given a library of genetic gates, logic synthesis can be applied to synthesize a multilevel genetic circuit, while accounting for biological constraints such as 'signal matching', 'crosstalk', and 'genetic context effects'. This framework has been implemented in a tool called Cello, which was applied to design 60 circuits for Escherichia coli, where the circuit function was specified using Verilog code and transformed to a DNA sequence. Across all these circuits, 92% of the output states functioned as predicted. The second implementation focuses on a framework to design complex genetic systems where the focus is on how the system behaves over time instead of its behavior at steady-state. Using Signal Temporal Logic (STL) -- a formalism used to specify properties of dense-time real-valued signals, biologists can specify very precise temporal behaviors of a genetic system. The framework describes how genetic circuits that are built from a well characterized library of DNA parts, can be scored by quantifying the 'degree of robustness' of in-silico simulations against an STL formula. Using formal verification, experimental data can be used to validate these in-silico designs. In this framework, the design space is also explored to predict external controls (such as approximate small molecule concentrations) that might be required to achieve a desired temporal behavior. This framework has been implemented in a tool called Phoenix."
@@ -336,7 +344,6 @@
   <title>Functional synthesis of genetic systems | Prashant Vaidyanathan</title>
 
 </head>
-
 <body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
 
   <aside class="search-results" id="search">
@@ -372,6 +379,8 @@
 
 
   
+
+
 
 
 
@@ -556,13 +565,26 @@
     <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
       
       <li class="nav-item">
-        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
       </li>
       
 
       
-      <li class="nav-item">
-        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
       </li>
       
 
@@ -612,11 +634,8 @@
   <div>
     
 
-
-
   
-  <span><a href="/authors/admin/">Prashant Vaidyanathan</a></span>
-
+  <span >Prashant Vaidyanathan</span>
   </div>
   
   
@@ -756,6 +775,7 @@
 
 
 
+
 <div class="share-box" aria-hidden="true">
   <ul class="share">
     
@@ -852,130 +872,28 @@
 
 
   
-  
-    
-  
-  
-
-
-
-
-
-
-  
-  
-  
-    
-  
-  
-  <div class="media author-card content-widget-hr">
-    
-      
-      <img class="portrait mr-3" src="/authors/admin/avatar_huf5e2deb01ad9b17586779d4abd7eac59_138314_250x250_fill_q90_lanczos_center.jpg" alt="Avatar">
-    
-
-    <div class="media-body">
-      <h5 class="card-title"><a href="/">Prashant Vaidyanathan</a></h5>
-      <h6 class="card-subtitle">Researcher</h6>
-      <p class="card-text">My research interests include distributed robotics, mobile computing and programmable matter.</p>
-      <ul class="network-icon" aria-hidden="true">
-  
     
     
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://scholar.google.com/citations?user=KcqfmtMAAAAJ&amp;hl=en" target="_blank" rel="noopener">
-        <i class="ai ai-google-scholar"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://github.com/PrashantVaidyanathan" target="_blank" rel="noopener">
-        <i class="fab fa-github"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.linkedin.com/in/prashant-vaidyanathan-b0937640" target="_blank" rel="noopener">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://twitter.com/vprashant1" target="_blank" rel="noopener">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-    <li>
-      <a href="mailto:vprashant1@gmail.com" >
-        <i class="fas fa-envelope"></i>
-      </a>
-    </li>
-  
-</ul>
-
-    </div>
-  </div>
-
-
-
-
 
 
 
 
 
   
+
+
   
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -987,7 +905,7 @@
     
     
     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
@@ -996,9 +914,9 @@
 
       
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
         
       
 
@@ -1014,6 +932,11 @@
 
     
     
+    <script>const isSiteThemeDark = true;</script>
+    
+
+    
+    
     
     
     
@@ -1025,7 +948,8 @@
         'post': "Posts",
         'project': "Projects",
         'publication' : "Publications",
-        'talk' : "Talks"
+        'talk' : "Talks",
+        'slides' : "Slides"
         };
     </script>
     
@@ -1062,6 +986,9 @@
 
     
     
+
+    
+    
     
     
     
@@ -1074,7 +1001,7 @@
     
     
     
-    <script src="/js/academic.min.a0d331bcd05dbe8b31e244f796710f08.js"></script>
+    <script src="/js/academic.min.66c553246b0f279a03be6e5597f72b52.js"></script>
 
     
 
@@ -1091,7 +1018,17 @@
 
   <p class="powered-by">
     
+  </p>
 
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
     <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.

@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!DOCTYPE html><html lang="en-us" >
 
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 4.7.0">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
 
   
 
@@ -21,7 +20,7 @@
   
   
 
-  <meta name="author" content="Prashant Vaidyanathan">
+  
 
   
   
@@ -51,7 +50,7 @@
   
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
     
@@ -63,8 +62,8 @@
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
         
       
     
@@ -190,7 +189,11 @@
   
   
   
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono&display=swap">
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono&display=swap">
+    
   
 
   
@@ -213,13 +216,15 @@
       dataLayer.push(arguments);
   }
 
-  function trackOutboundLink(url) {
+  function trackOutboundLink(url, target) {
     gtag('event', 'click', {
          'event_category': 'outbound',
          'event_label': url,
          'transport_type': 'beacon',
          'event_callback': function () {
-           document.location = url;
+           if (target !== '_blank') {
+             document.location = url;
+           }
          }
     });
     console.debug("Outbound link clicked: " + url);
@@ -229,7 +234,7 @@
     if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
       return;
     }
-    trackOutboundLink(event.target);  
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
   }
 
   gtag('js', new Date());
@@ -244,6 +249,9 @@
 
 
   
+  
+
+  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/images/icon_hud036e253d667841def3d4af41fe46192_1097_32x32_fill_lanczos_center_2.png">
@@ -251,6 +259,8 @@
 
   <link rel="canonical" href="/publication/cello2016/">
 
+  
+  
   
   
   
@@ -277,8 +287,6 @@
 
 
     
-
-
 
 
 
@@ -315,7 +323,7 @@
     "name": "Prashant Vaidyanathan",
     "logo": {
       "@type": "ImageObject",
-      "url": "img//"
+      "url": "/images/icon_hud036e253d667841def3d4af41fe46192_1097_192x192_fill_lanczos_center_2.png"
     }
   },
   "description": "Computation can be performed in living cells by DNA-encoded circuits that process sensory information and control biological functions. Their construction is time-intensive, requiring manual part assembly and balancing of regulator expression. We describe a design environment, Cello, in which a user writes Verilog code that is automatically transformed into a DNA sequence. Algorithms build a circuit diagram, assign and connect gates, and simulate performance. Reliable circuit design requires the insulation of gates from genetic context, so that they function identically when used in different circuits. We used Cello to design 60 circuits for Escherichia coli (880,000 base pairs of DNA), for which each DNA sequence was built as predicted by the software with no additional tuning. Of these, 45 circuits performed correctly in every output state (up to 10 regulators and 55 parts), and across all circuits 92% of the output states functioned as predicted. Design automation simplifies the incorporation of genetic circuits into biotechnology projects that require decision-making, control, sensing, or spatial organization."
@@ -339,7 +347,6 @@
   <title>Genetic circuit design automation | Prashant Vaidyanathan</title>
 
 </head>
-
 <body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
 
   <aside class="search-results" id="search">
@@ -375,6 +382,8 @@
 
 
   
+
+
 
 
 
@@ -559,13 +568,26 @@
     <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
       
       <li class="nav-item">
-        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
       </li>
       
 
       
-      <li class="nav-item">
-        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
       </li>
       
 
@@ -623,11 +645,8 @@
   <div>
     
 
-
-
   
-  <span><a href="/authors/alec-ak-nielsen/">Alec AK Nielsen</a></span>, <span><a href="/authors/bryan-s-der/">Bryan S. Der</a></span>, <span><a href="/authors/jonghyeon-shin/">Jonghyeon Shin</a></span>, <span><a href="/authors/admin/">Prashant Vaidyanathan</a></span>, <span><a href="/authors/vanya-paralanov/">Vanya Paralanov</a></span>, <span>Elizabeth A. Strychalski</span>, <span><a href="/authors/david-ross/">David Ross</a></span>, <span><a href="/authors/douglas-densmore/">Douglas Densmore</a></span>, <span><a href="/authors/christopher-a-voigt/">Christopher A. Voigt</a></span>
-
+  <span >Alec AK Nielsen</span>, <span >Bryan S. Der</span>, <span >Jonghyeon Shin</span>, <span >Prashant Vaidyanathan</span>, <span >Vanya Paralanov</span>, <span >Elizabeth A. Strychalski</span>, <span >David Ross</span>, <span >Douglas Densmore</span>, <span >Christopher A. Voigt</span>
   </div>
   
   
@@ -778,6 +797,7 @@
 
 
 
+
 <div class="article-tags">
   
   <a class="badge badge-light" href="/tags/gls/">GLS</a>
@@ -882,53 +902,116 @@
 
 
   
-  
     
-  
-  
-
-
-
-
-
-
-  
-  
-  
-  
-  <div class="media author-card content-widget-hr">
     
 
-    <div class="media-body">
-      <h5 class="card-title"><a href="/authors/alec-ak-nielsen/"></a></h5>
-      
-      
-      <ul class="network-icon" aria-hidden="true">
+
+
+
+
   
-</ul>
-
-    </div>
-  </div>
 
 
-
-
+  
+    
+    
 
 
 
 
 
   
+
+
   
-  <div class="article-widget content-widget-hr">
-    <h3>Related</h3>
-    <ul>
-      
-      <li><a href="/publication/gls2015/">A Framework for Genetic Logic Synthesis</a></li>
-      
-    </ul>
-  </div>
+    
+    
+
+
+
+
+
   
+
+
+  
+    
+    
+
+
+
+
+
+  
+
+
+  
+    
+    
+
+
+
+
+
+  
+
+
+  
+    
+    
+
+
+
+
+
+  
+
+
+  
+    
+    
+
+
+
+
+
+  
+
+
+  
+    
+    
+
+
+
+
+
+  
+
+
+  
+    
+    
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -940,7 +1023,7 @@
     
     
     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
@@ -949,9 +1032,9 @@
 
       
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
         
       
 
@@ -967,6 +1050,11 @@
 
     
     
+    <script>const isSiteThemeDark = true;</script>
+    
+
+    
+    
     
     
     
@@ -978,7 +1066,8 @@
         'post': "Posts",
         'project': "Projects",
         'publication' : "Publications",
-        'talk' : "Talks"
+        'talk' : "Talks",
+        'slides' : "Slides"
         };
     </script>
     
@@ -1015,6 +1104,9 @@
 
     
     
+
+    
+    
     
     
     
@@ -1027,7 +1119,7 @@
     
     
     
-    <script src="/js/academic.min.a0d331bcd05dbe8b31e244f796710f08.js"></script>
+    <script src="/js/academic.min.66c553246b0f279a03be6e5597f72b52.js"></script>
 
     
 
@@ -1044,7 +1136,17 @@
 
   <p class="powered-by">
     
+  </p>
 
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
     <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.

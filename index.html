@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!DOCTYPE html><html lang="en-us" >
 
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 4.7.0">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
 
   
 
@@ -21,7 +20,7 @@
   
   
 
-  <meta name="author" content="Prashant Vaidyanathan">
+  
 
   
   
@@ -51,7 +50,7 @@
   
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
     
@@ -63,8 +62,8 @@
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
         
       
     
@@ -190,7 +189,11 @@
   
   
   
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono&display=swap">
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono&display=swap">
+    
   
 
   
@@ -213,13 +216,15 @@
       dataLayer.push(arguments);
   }
 
-  function trackOutboundLink(url) {
+  function trackOutboundLink(url, target) {
     gtag('event', 'click', {
          'event_category': 'outbound',
          'event_label': url,
          'transport_type': 'beacon',
          'event_callback': function () {
-           document.location = url;
+           if (target !== '_blank') {
+             document.location = url;
+           }
          }
     });
     console.debug("Outbound link clicked: " + url);
@@ -229,7 +234,7 @@
     if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
       return;
     }
-    trackOutboundLink(event.target);  
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
   }
 
   gtag('js', new Date());
@@ -244,6 +249,11 @@
 
 
   
+  
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  
+
+  
   <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Prashant Vaidyanathan">
   
 
@@ -253,6 +263,8 @@
 
   <link rel="canonical" href="/">
 
+  
+  
   
   
   
@@ -304,7 +316,6 @@
   <title>Prashant Vaidyanathan</title>
 
 </head>
-
 <body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="dark">
 
   <aside class="search-results" id="search">
@@ -340,6 +351,8 @@
 
 
   
+
+
 
 
 
@@ -524,13 +537,26 @@
     <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
       
       <li class="nav-item">
-        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
       </li>
       
 
       
-      <li class="nav-item">
-        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
       </li>
       
 
@@ -557,10 +583,11 @@
 
 
 
+
   
-
-
-
+  
+  
+  
 
 
 
@@ -612,22 +639,23 @@
 
 
 
+
 <div class="row">
   <div class="col-12 col-lg-4">
     <div id="profile">
 
       
       
-      <img class="portrait" src="/authors/admin/avatar_huf5e2deb01ad9b17586779d4abd7eac59_138314_250x250_fill_q90_lanczos_center.jpg" alt="Avatar">
+      <img class="avatar avatar-circle" src="/authors/admin/avatar_huf5e2deb01ad9b17586779d4abd7eac59_138314_270x270_fill_q90_lanczos_center.jpg" alt="">
       
 
       <div class="portrait-title">
-        <h2>Prashant Vaidyanathan</h2>
+        <h2></h2>
         <h3>Researcher</h3>
 
         
         <h3>
-          <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/" target="_blank" rel="noopener">
+          <a href="https://www.microsoft.com/en-us/research/people/t-prva/" target="_blank" rel="noopener">
           <span>Microsoft Research</span>
           </a>
         </h3>
@@ -726,8 +754,12 @@
     
     <h1>Biography</h1>
 
-    <p>I am a Researcher working in the <a href="https://www.microsoft.com/en-us/research/project/stationb/">Biological Computation Group</a> at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/">Microsoft Research</a> where I develop frameworks to help build and understand gene networks in Synthetic Biology. I am currently working on designing a platform for programming biological systems which will be used to design genetic circuits encoded with synthetic decision making capabilities.</p>
-<p>I received my PhD in Computer Engineering from Boston University in 2019. I was part of the Cross-Disciplinary Integration of Design Automation Research (<a href="http://cidarlab.org/">CIDAR</a>) Lab and worked under <a href="http://cidarlab.org/doug-densmore/">Prof. Douglas Densmore (PhD)</a>. My PhD Dissertation - &ldquo;Functional Synthesis of Genetic Systems&rdquo; focussed on developing computational and mathematical frameworks for the synthesis and design of genetic circuits.</p>
+    <p>I am a Researcher working in the 
+<a href="https://www.microsoft.com/en-us/research/project/stationb/" target="_blank" rel="noopener">Biological Computation Group</a> at 
+<a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/" target="_blank" rel="noopener">Microsoft Research</a> where I develop frameworks to help build and understand gene networks in Synthetic Biology. I am currently working on designing a platform for programming biological systems which will be used to design genetic circuits encoded with synthetic decision making capabilities.</p>
+<p>I received my PhD in Computer Engineering from Boston University in 2019. I was part of the Cross-Disciplinary Integration of Design Automation Research (
+<a href="http://cidarlab.org/" target="_blank" rel="noopener">CIDAR</a>) Lab and worked under 
+<a href="http://cidarlab.org/doug-densmore/" target="_blank" rel="noopener">Prof. Douglas Densmore (PhD)</a>. My PhD Dissertation - &ldquo;Functional Synthesis of Genetic Systems&rdquo; focussed on developing computational and mathematical frameworks for the synthesis and design of genetic circuits.</p>
 <p>I also recieved an MS degree in Computer Engineering from Boston University, Boston, MA, USA in 2014, and a BE (Hons.) degree in Electrical and Electronics engineering from the Birla Institute of Technology and Science in 2012.</p>
 
 
@@ -1431,6 +1463,14 @@
 
 
 
+
+
+
+
+
+  
+
+
 <div class="row">
   <div class="col-12 col-lg-4 section-heading">
     <h1>Featured Publication</h1>
@@ -1472,11 +1512,8 @@
   <div>
     
 
-
-
   
-  <span><a href="/authors/alec-ak-nielsen/">Alec AK Nielsen</a></span>, <span><a href="/authors/bryan-s-der/">Bryan S. Der</a></span>, <span><a href="/authors/jonghyeon-shin/">Jonghyeon Shin</a></span>, <span><a href="/authors/admin/">Prashant Vaidyanathan</a></span>, <span><a href="/authors/vanya-paralanov/">Vanya Paralanov</a></span>, <span>Elizabeth A. Strychalski</span>, <span><a href="/authors/david-ross/">David Ross</a></span>, <span><a href="/authors/douglas-densmore/">Douglas Densmore</a></span>, <span><a href="/authors/christopher-a-voigt/">Christopher A. Voigt</a></span>
-
+  <span >Alec AK Nielsen</span>, <span >Bryan S. Der</span>, <span >Jonghyeon Shin</span>, <span >Prashant Vaidyanathan</span>, <span >Vanya Paralanov</span>, <span >Elizabeth A. Strychalski</span>, <span >David Ross</span>, <span >Douglas Densmore</span>, <span >Christopher A. Voigt</span>
   </div>
   
   
@@ -1518,7 +1555,7 @@
   
   
   <a href="/publication/cello2016/">
-      <img src="/publication/cello2016/featured_hu1277959bc9d8bf7b63da181e7deac72f_130159_918x517_fill_q90_lanczos_smart1.jpg" class="article-banner" alt="">
+      <img src="/publication/cello2016/featured_hu1277959bc9d8bf7b63da181e7deac72f_130159_918x517_fill_q90_lanczos_smart1.jpg" class="article-banner" alt="Genetic circuit design automation">
   </a>
   
 
@@ -1527,9 +1564,11 @@
   </h3>
 
   
-  <div class="article-style">
-    <p>Computation can be performed in living cells by DNA-encoded circuits that process sensory information and control biological functions. Their construction is time-intensive, requiring manual part assembly and balancing of regulator expression. We describe a design environment, Cello, in which a user writes Verilog code that is automatically transformed into a DNA sequence. Algorithms build a circuit diagram, assign and connect gates, and simulate performance. Reliable circuit design requires the insulation of gates from genetic context, so that they function identically when used in different circuits. We used Cello to design 60 circuits for Escherichia coli (880,000 base pairs of DNA), for which each DNA sequence was built as predicted by the software with no additional tuning. Of these, 45 circuits performed correctly in every output state (up to 10 regulators and 55 parts), and across all circuits 92% of the output states functioned as predicted. Design automation simplifies the incorporation of genetic circuits into biotechnology projects that require decision-making, control, sensing, or spatial organization.</p>
-  </div>
+  <a href="/publication/cello2016/" class="summary-link">
+    <div class="article-style">
+      <p>Computation can be performed in living cells by DNA-encoded circuits that process sensory information and control biological functions. Their construction is time-intensive, requiring manual part assembly and balancing of regulator expression. We describe a design environment, Cello, in which a user writes Verilog code that is automatically transformed into a DNA sequence. Algorithms build a circuit diagram, assign and connect gates, and simulate performance. Reliable circuit design requires the insulation of gates from genetic context, so that they function identically when used in different circuits. We used Cello to design 60 circuits for Escherichia coli (880,000 base pairs of DNA), for which each DNA sequence was built as predicted by the software with no additional tuning. Of these, 45 circuits performed correctly in every output state (up to 10 regulators and 55 parts), and across all circuits 92% of the output states functioned as predicted. Design automation simplifies the incorporation of genetic circuits into biotechnology projects that require decision-making, control, sensing, or spatial organization.</p>
+    </div>
+  </a>
   
 
   
@@ -1581,6 +1620,8 @@
 
       
     
+
+  
 
   </div>
 </div>
@@ -1653,6 +1694,7 @@
 
 
 
+
   
 
 
@@ -1700,9 +1742,11 @@
     </h3>
 
     
-    <div class="article-style">
-      Molecular biologists rely on the use of fluorescent probes to take measurements of their model systems. These fluorophores fall into …
-    </div>
+    <a href="/publication/fpselection2020/" class="summary-link">
+      <div class="article-style">
+        Molecular biologists rely on the use of fluorescent probes to take measurements of their model systems. These fluorophores fall into …
+      </div>
+    </a>
     
 
     <div class="stream-meta article-metadata">
@@ -1713,11 +1757,8 @@
       <div>
         
 
-
-
   
-  <span><a href="/authors/admin/">Prashant Vaidyanathan</a></span>, <span><a href="/authors/evan-appleton/">Evan Appleton</a></span>, <span><a href="/authors/david-tran/">David Tran</a></span>, <span><a href="/authors/alexander-vahid/">Alexander Vahid</a></span>, <span><a href="/authors/george-church/">George Church</a></span>, <span><a href="/authors/douglas-densmore/">Douglas Densmore</a></span>
-
+  <span >Prashant Vaidyanathan</span>, <span >Evan Appleton</span>, <span >David Tran</span>, <span >Alexander Vahid</span>, <span >George Church</span>, <span >Douglas Densmore</span>
       </div>
       
     </div>
@@ -1804,9 +1845,11 @@
     </h3>
 
     
-    <div class="article-style">
-      The dynamic behavior of synthetic gene circuits plays a key role in ensuring their correct function. However, our ability to accurately …
-    </div>
+    <a href="/publication/dynchar2019/" class="summary-link">
+      <div class="article-style">
+        The dynamic behavior of synthetic gene circuits plays a key role in ensuring their correct function. However, our ability to accurately …
+      </div>
+    </a>
     
 
     <div class="stream-meta article-metadata">
@@ -1817,11 +1860,8 @@
       <div>
         
 
-
-
   
-  <span><a href="/authors/neil-dalchau/">Neil Dalchau</a></span>, <span>Paul K. Grant</span>, <span><a href="/authors/admin/">Prashant Vaidyanathan</a></span>, <span><a href="/authors/colin-gravill/">Colin Gravill</a></span>, <span><a href="/authors/carlo-spaccasassi/">Carlo Spaccasassi</a></span>, <span><a href="/authors/andrew-phillips/">Andrew Phillips</a></span>
-
+  <span >Neil Dalchau</span>, <span >Paul K. Grant</span>, <span >Prashant Vaidyanathan</span>, <span >Colin Gravill</span>, <span >Carlo Spaccasassi</span>, <span >Andrew Phillips</span>
       </div>
       
     </div>
@@ -1902,9 +1942,11 @@
     </h3>
 
     
-    <div class="article-style">
-      Synthetic genetic regulatory networks (or genetic circuits) can operate in complex biochemical environments to process and manipulate …
-    </div>
+    <a href="/publication/phdthesis/" class="summary-link">
+      <div class="article-style">
+        Synthetic genetic regulatory networks (or genetic circuits) can operate in complex biochemical environments to process and manipulate …
+      </div>
+    </a>
     
 
     <div class="stream-meta article-metadata">
@@ -1915,11 +1957,8 @@
       <div>
         
 
-
-
   
-  <span><a href="/authors/admin/">Prashant Vaidyanathan</a></span>
-
+  <span >Prashant Vaidyanathan</span>
       </div>
       
     </div>
@@ -2000,9 +2039,11 @@
     </h3>
 
     
-    <div class="article-style">
-      Signal Temporal Logic (STL) is a formal language for describing a broad range of real-valued, temporal properties in cyber-physical …
-    </div>
+    <a href="/publication/stlmetrics2018/" class="summary-link">
+      <div class="article-style">
+        Signal Temporal Logic (STL) is a formal language for describing a broad range of real-valued, temporal properties in cyber-physical …
+      </div>
+    </a>
     
 
     <div class="stream-meta article-metadata">
@@ -2013,11 +2054,8 @@
       <div>
         
 
-
-
   
-  <span><a href="/authors/curtis-madsen/">Curtis Madsen</a></span>, <span><a href="/authors/admin/">Prashant Vaidyanathan</a></span>, <span><a href="/authors/sadra-sadraddini/">Sadra Sadraddini</a></span>, <span><a href="/authors/cristian-ioan-vasile/">Cristian-Ioan Vasile</a></span>, <span>Nicholas A. DeLateur</span>, <span><a href="/authors/ron-weiss/">Ron Weiss</a></span>, <span><a href="/authors/douglas-densmore/">Douglas Densmore</a></span>, <span><a href="/authors/calin-belta/">Calin Belta</a></span>
-
+  <span >Curtis Madsen</span>, <span >Prashant Vaidyanathan</span>, <span >Sadra Sadraddini</span>, <span >Cristian-Ioan Vasile</span>, <span >Nicholas A. DeLateur</span>, <span >Ron Weiss</span>, <span >Douglas Densmore</span>, <span >Calin Belta</span>
       </div>
       
     </div>
@@ -2108,9 +2146,11 @@
     </h3>
 
     
-    <div class="article-style">
-      Computational models are essential to engineer predictable biological systems and to scale up this process for complex systems. …
-    </div>
+    <a href="/publication/acsmodeling2018/" class="summary-link">
+      <div class="article-style">
+        Computational models are essential to engineer predictable biological systems and to scale up this process for complex systems. …
+      </div>
+    </a>
     
 
     <div class="stream-meta article-metadata">
@@ -2121,11 +2161,8 @@
       <div>
         
 
-
-
   
-  <span>Göksel Misirli</span>, <span><a href="/authors/tramy-nguyen/">Tramy Nguyen</a></span>, <span><a href="/authors/james-alastair-mclaughlin/">James Alastair McLaughlin</a></span>, <span><a href="/authors/admin/">Prashant Vaidyanathan</a></span>, <span>Timothy S. Jones</span>, <span><a href="/authors/douglas-densmore/">Douglas Densmore</a></span>, <span><a href="/authors/chris-myers/">Chris Myers</a></span>, <span><a href="/authors/anil-wipat/">Anil Wipat</a></span>
-
+  <span >Göksel Misirli</span>, <span >Tramy Nguyen</span>, <span >James Alastair McLaughlin</span>, <span >Prashant Vaidyanathan</span>, <span >Timothy S. Jones</span>, <span >Douglas Densmore</span>, <span >Chris Myers</span>, <span >Anil Wipat</span>
       </div>
       
     </div>
@@ -2350,7 +2387,7 @@
     
     
     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
@@ -2359,9 +2396,9 @@
 
       
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
         
       
 
@@ -2377,6 +2414,11 @@
 
     
     
+    <script>const isSiteThemeDark = true;</script>
+    
+
+    
+    
     
     
     
@@ -2388,7 +2430,8 @@
         'post': "Posts",
         'project': "Projects",
         'publication' : "Publications",
-        'talk' : "Talks"
+        'talk' : "Talks",
+        'slides' : "Slides"
         };
     </script>
     
@@ -2422,6 +2465,21 @@
 
     
     
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    
+
+    
+    
 
     
     
@@ -2437,7 +2495,7 @@
     
     
     
-    <script src="/js/academic.min.a0d331bcd05dbe8b31e244f796710f08.js"></script>
+    <script src="/js/academic.min.66c553246b0f279a03be6e5597f72b52.js"></script>
 
     
 
@@ -2454,7 +2512,17 @@
 
   <p class="powered-by">
     
+  </p>
 
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
     <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
