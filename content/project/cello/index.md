@@ -2,7 +2,7 @@
 title: Cello
 summary: A tool for Genetic circuit design automation
 tags:
-- Genetic Engineering
+- Genetic Circuit Design
 - Synthetic Biology
 date: "2016-04-27T00:00:00Z"
 

@@ -19,6 +19,15 @@ date_format = "2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[item]]
+  organization = "Microsoft"
+  organization_url = "https://microsoft.com"
+  title = "First-place winner of company-wide Hackathon"
+  url = ""
+  date_start = "2019-05-30"
+  date_end = ""
+  description = ""
+
+[[item]]
   organization = "Boston University"
   organization_url = "http://www.bu.edu/"
   title = "Outstanding Dissertation of the Year (Computer Engineering)"

@@ -2,7 +2,6 @@
 title: FPselection
 summary: A tool to automate the selection of fluorescent reporters
 tags:
-- Fluorescence
 - Synthetic Biology
 - Molecular Biology
 date: "2020-05-15T00:00:00Z"
