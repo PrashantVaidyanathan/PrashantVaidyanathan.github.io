@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Miscellaneous Projects | Prashant Vaidyanathan</title>
+    <link>/tags/miscellaneous-projects/</link>
+      <atom:link href="/tags/miscellaneous-projects/index.xml" rel="self" type="application/rss+xml" />
+    <description>Miscellaneous Projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 30 May 2013 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hud036e253d667841def3d4af41fe46192_1097_512x512_fill_lanczos_center_2.png</url>
+      <title>Miscellaneous Projects</title>
+      <link>/tags/miscellaneous-projects/</link>
+    </image>
+    
+    <item>
+      <title>Infared Tracking RC Car</title>
+      <link>/project/irtrackingracingcar/</link>
+      <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
+      <guid>/project/irtrackingracingcar/</guid>
+      <description>&lt;p&gt;The project consisted of a system to make an RC car autonomously follow a remote, Infrared (IR) emitting beacon. The remote beacon was built using an MSP430 microcontroller to transmit a 38KHz pulse width modulated (PWM) IR signal via an IR LED. The microcontroller, IR LED, and battery power were then soldered into a PCB board. To track the IR signal emitting from the beacon a circuit of IR receivers that demodulated the 38KHz PWM signal, arranged in a particular geometry, was built on a PCB. Finally, a Gumstix board used the output of the receiver circuit to determine the car&amp;rsquo;s position relative to the beacon and drive the car toward the beacon. The Gumstix decision algorithm was implemented in a Linux kernel module.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kocoon Baby Mote</title>
+      <link>/project/kocoon/</link>
+      <pubDate>Sun, 30 Dec 2012 00:00:00 +0000</pubDate>
+      <guid>/project/kocoon/</guid>
+      <description>&lt;p&gt;An embedded device to monitor vital signs (body temperature, pulse rate, and humidity) for infants and send real time alerts to doctors and hospital personnel to facilitate fast and precise medical response.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cloud Scrubs</title>
+      <link>/project/cloudscrubs/</link>
+      <pubDate>Wed, 30 May 2012 00:00:00 +0000</pubDate>
+      <guid>/project/cloudscrubs/</guid>
+      <description>&lt;p&gt;A multi-platform electronic data storage and retrieval system to store and secure medical information for patients and allow doctors easy access to data while maintaining doctor-patient condentiality.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

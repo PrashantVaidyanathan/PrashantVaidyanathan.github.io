@@ -30,6 +30,30 @@
     </item>
     
     <item>
+      <title>Phoenix</title>
+      <link>/project/phoenix/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/project/phoenix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GEC</title>
+      <link>/project/gec/</link>
+      <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
+      <guid>/project/gec/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FSBOL</title>
+      <link>/project/fsbol/</link>
+      <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
+      <guid>/project/fsbol/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Scalable dynamic characterization of synthetic gene circuits</title>
       <link>/publication/dynchar2019/</link>
       <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
@@ -62,10 +86,26 @@
     </item>
     
     <item>
+      <title>STL Metrics</title>
+      <link>/project/stlmetrics/</link>
+      <pubDate>Fri, 30 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>/project/stlmetrics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Grid-based temporal logic inference</title>
       <link>/publication/gridtli2017/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       <guid>/publication/gridtli2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Grid TLI</title>
+      <link>/project/gridtli/</link>
+      <pubDate>Thu, 30 Mar 2017 00:00:00 +0000</pubDate>
+      <guid>/project/gridtli/</guid>
       <description></description>
     </item>
     
@@ -79,10 +119,26 @@
     </item>
     
     <item>
+      <title>NetSynth</title>
+      <link>/project/netsynth/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/netsynth/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Genetic circuit design automation</title>
       <link>/publication/cello2016/</link>
       <pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate>
       <guid>/publication/cello2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Clotho</title>
+      <link>/project/clotho/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>/project/clotho/</guid>
       <description></description>
     </item>
     
@@ -92,6 +148,33 @@
       <pubDate>Sat, 01 Aug 2015 00:00:00 +0000</pubDate>
       <guid>/publication/gls2015/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Infared Tracking RC Car</title>
+      <link>/project/irtrackingracingcar/</link>
+      <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
+      <guid>/project/irtrackingracingcar/</guid>
+      <description>&lt;p&gt;The project consisted of a system to make an RC car autonomously follow a remote, Infrared (IR) emitting beacon. The remote beacon was built using an MSP430 microcontroller to transmit a 38KHz pulse width modulated (PWM) IR signal via an IR LED. The microcontroller, IR LED, and battery power were then soldered into a PCB board. To track the IR signal emitting from the beacon a circuit of IR receivers that demodulated the 38KHz PWM signal, arranged in a particular geometry, was built on a PCB. Finally, a Gumstix board used the output of the receiver circuit to determine the car&amp;rsquo;s position relative to the beacon and drive the car toward the beacon. The Gumstix decision algorithm was implemented in a Linux kernel module.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kocoon Baby Mote</title>
+      <link>/project/kocoon/</link>
+      <pubDate>Sun, 30 Dec 2012 00:00:00 +0000</pubDate>
+      <guid>/project/kocoon/</guid>
+      <description>&lt;p&gt;An embedded device to monitor vital signs (body temperature, pulse rate, and humidity) for infants and send real time alerts to doctors and hospital personnel to facilitate fast and precise medical response.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cloud Scrubs</title>
+      <link>/project/cloudscrubs/</link>
+      <pubDate>Wed, 30 May 2012 00:00:00 +0000</pubDate>
+      <guid>/project/cloudscrubs/</guid>
+      <description>&lt;p&gt;A multi-platform electronic data storage and retrieval system to store and secure medical information for patients and allow doctors easy access to data while maintaining doctor-patient condentiality.&lt;/p&gt;
+</description>
     </item>
     
     <item>

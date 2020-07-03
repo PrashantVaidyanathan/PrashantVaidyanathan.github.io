@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Storage | Prashant Vaidyanathan</title>
+    <link>/tags/data-storage/</link>
+      <atom:link href="/tags/data-storage/index.xml" rel="self" type="application/rss+xml" />
+    <description>Data Storage</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hud036e253d667841def3d4af41fe46192_1097_512x512_fill_lanczos_center_2.png</url>
+      <title>Data Storage</title>
+      <link>/tags/data-storage/</link>
+    </image>
+    
+    <item>
+      <title>Clotho</title>
+      <link>/project/clotho/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>/project/clotho/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
