@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Researcher
+role: Senior Researcher
 
 # Organizations/Affiliations
 organizations:
@@ -75,7 +75,7 @@ user_groups:
 - Visitors
 ---
 
-I am a Researcher working in the [Biological Computation Group](https://www.microsoft.com/en-us/research/project/stationb/) at [Microsoft Research](https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/) where I develop frameworks to help build and understand gene networks in Synthetic Biology. I am currently working on designing a platform for programming biological systems which will be used to design genetic circuits encoded with synthetic decision making capabilities.
+I am a Senior Researcher working in the [Health Intelligence Group](https://www.microsoft.com/en-us/research/theme/health-intelligence/) at [Microsoft Research](https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/) where I develop frameworks to help build and understand gene networks in Synthetic Biology. I am currently working on designing a platform for programming biological systems which will be used to design genetic circuits encoded with synthetic decision making capabilities.
 
 I received my PhD in Computer Engineering from Boston University in 2019. I was part of the Cross-Disciplinary Integration of Design Automation Research ([CIDAR](http://cidarlab.org/)) Lab and worked under [Prof. Douglas Densmore (PhD)](http://cidarlab.org/doug-densmore/). My PhD Dissertation - "Functional Synthesis of Genetic Systems" focussed on developing computational and mathematical frameworks for the synthesis and design of genetic circuits.
 
