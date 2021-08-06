@@ -29,10 +29,10 @@ interests:
 
 education:
   courses:
-  - course: PhD in Computer Engingeering
+  - course: PhD in Computer Engineering
     institution: Boston University
     year: 2019
-  - course: MS in Computer Engingeering
+  - course: MS in Computer Engineering
     institution: Boston University
     year: 2014
   - course: BE in Electronics and Electrical Engineering
