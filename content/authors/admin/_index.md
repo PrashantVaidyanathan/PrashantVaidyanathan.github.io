@@ -10,21 +10,22 @@ authors:
 superuser: true
 
 # Role/position
-role: Senior Researcher
+role: Group Lead - Data Architecture
 
 # Organizations/Affiliations
 organizations:
-- name: Microsoft Research
-  url: "https://www.microsoft.com/en-us/research/people/t-prva/"
+- name: Oxford Biomedica
+  url: "http://oxb.com"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: My research interests include synthetic biology, genetic engineering, lab automation, and data standardization.
 
 interests:
 - Synthetic Biology
 - Genetic Engineering
-- Computational Algorithms
+- Data Standardization
 - Bio-design Automation
+- Lab Automation
 - Embedded Systems
 
 education:
@@ -75,7 +76,7 @@ user_groups:
 - Visitors
 ---
 
-I am a Senior Researcher working in the [Health Intelligence Group](https://www.microsoft.com/en-us/research/theme/health-intelligence/) at [Microsoft Research](https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/) where I develop frameworks to help build and understand gene networks in Synthetic Biology. I am currently working on designing a platform for programming biological systems which will be used to design genetic circuits encoded with synthetic decision making capabilities.
+I'm a Group Lead at [Oxford Biomedica](http://oxb.com) focussing on data architecture and standardization for biological and experimental data. I'm currently working on creating an ecosystem to facilitate FAIR data accross the entire organization. Before this, I worked as a Senior Researcher in the [Health Intelligence Group](https://www.microsoft.com/en-us/research/theme/health-intelligence/) at [Microsoft Research](https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/) where I developed frameworks to help build and understand gene networks in Synthetic Biology.
 
 I received my PhD in Computer Engineering from Boston University in 2019. I was part of the Cross-Disciplinary Integration of Design Automation Research ([CIDAR](http://cidarlab.org/)) Lab and worked under [Prof. Douglas Densmore (PhD)](http://cidarlab.org/doug-densmore/). My PhD Dissertation - "Functional Synthesis of Genetic Systems" focussed on developing computational and mathematical frameworks for the synthesis and design of genetic circuits.
 
