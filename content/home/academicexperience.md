@@ -48,9 +48,18 @@ date_format = "Jan 2006"
   title = "SBOL Editor"
   company = "The Synthetic Biology Open Language"
   company_url = "https://sbolstandard.org/"
-  location = "Boston"
+  location = "UK"
   date_start = "2020-02-01"
-#  date_end = "Present"
+  date_end = "2023-02-01"
+  description = ""
+
+[[experience]]
+  title = "SBOL Chair"
+  company = "The Synthetic Biology Open Language"
+  company_url = "https://sbolstandard.org/"
+  location = "UK"
+  date_start = "2020-05-01"
+  # date_end = "2023-02-01"
   description = ""
 
 +++
