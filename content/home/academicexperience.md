@@ -58,7 +58,7 @@ date_format = "Jan 2006"
   company = "The Synthetic Biology Open Language"
   company_url = "https://sbolstandard.org/"
   location = "UK"
-  date_start = "2020-05-01"
+  date_start = "2023-05-01"
   # date_end = "2023-02-01"
   description = ""
 

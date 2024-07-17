@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Group Lead - Data Architecture
+role: Director - Data Science & Software Development
 
 # Organizations/Affiliations
 organizations:
@@ -24,6 +24,7 @@ interests:
 - Synthetic Biology
 - Genetic Engineering
 - Data Standardization
+- Data Science
 - Bio-design Automation
 - Lab Automation
 - Embedded Systems
@@ -47,16 +48,16 @@ education:
 social:
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.com/citations?user=KcqfmtMAAAAJ&hl=en
+  link: https://scholar.google.com/citations?user=SX3S6NYAAAAJ&hl=en
 - icon: github
   icon_pack: fab
   link: https://github.com/PrashantVaidyanathan
 - icon: linkedin
   icon_pack: fab
   link: 'https://www.linkedin.com/in/prashant-vaidyanathan-b0937640'
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/vprashant1
+#- icon: twitter
+#  icon_pack: fab
+#  link: https://twitter.com/vprashant1
 - icon: envelope
   icon_pack: fas
   link: "mailto:vprashant1@gmail.com"  # For a direct email link, use "mailto:test@example.org".
@@ -76,7 +77,7 @@ user_groups:
 - Visitors
 ---
 
-I'm a Group Lead at [Oxford Biomedica](http://oxb.com) focussing on data architecture and standardization for biological and experimental data. I'm currently working on creating an ecosystem to facilitate FAIR data accross the entire organization. Before this, I worked as a Senior Researcher in the [Health Intelligence Group](https://www.microsoft.com/en-us/research/theme/health-intelligence/) at [Microsoft Research](https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/) where I developed frameworks to help build and understand gene networks in Synthetic Biology.
+I'm a Director at [Oxford Biomedica](http://oxb.com) focusing on digital transformation for biological and experimental data.  I lead all software development activities and data science efforts across the company, driving innovation and delivering impactful solutions. Before this, I worked as a Senior Researcher in the [Health Intelligence Group](https://www.microsoft.com/en-us/research/theme/health-intelligence/) at [Microsoft Research](https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/) where I developed frameworks to help build and understand gene networks in Synthetic Biology.
 
 I received my PhD in Computer Engineering from Boston University in 2019. I was part of the Cross-Disciplinary Integration of Design Automation Research ([CIDAR](http://cidarlab.org/)) Lab and worked under [Prof. Douglas Densmore (PhD)](http://cidarlab.org/doug-densmore/). My PhD Dissertation - "Functional Synthesis of Genetic Systems" focussed on developing computational and mathematical frameworks for the synthesis and design of genetic circuits.
 
