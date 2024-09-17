@@ -22,7 +22,7 @@ date_format = "Jan 2006"
   company = "Oxford Biomedica"
   company_url = ""
   location = "Oxford, UK"
-  date_start = "2021-05-01"
+  date_start = "2024-05-01"
   date_end = ""
   description = ""
 [[experience]]
@@ -31,7 +31,7 @@ date_format = "Jan 2006"
   company_url = ""
   location = "Oxford, UK"
   date_start = "2021-11-08"
-  date_end = "2021-05-01"
+  date_end = "2024-05-01"
   description = ""
 
 [[experience]]
